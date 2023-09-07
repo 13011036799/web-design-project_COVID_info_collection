@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+		<title>COVID-19 疫情记忆官方网站-新闻页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_news.css" rel="stylesheet" type="text/css"  media="all" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>
+		
+		<!---banner--->
+		<div class="restriction">
+			<div class="n-b-container">
+				<div class="box">				
+					<div class="item" >
+						<!-- 默认第一个选中 -->
+						<input type="radio" name="btn" id="btn1" checked>
+						<label for="btn1" style="--i:1"></label>
+						<div class="img" >
+							<img src="images/k-b-1.jpg" >
+							<div class="right"> 
+								<a href="https://www.sohu.com/a/539500049_362042?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.3.16504335844667D2Anmf&_f=index_chan08news_2" >上海疫情<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.sohu.com/a/539500049_362042?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.3.16504335844667D2Anmf&_f=index_chan08news_2">呈下降趋势 金山区和崇明区首日达到社会面清零目标</a> 
+								</div>
+						</div>				
+					</div>			
+					<div class="item">
+						<input type="radio" name="btn" id="btn2">
+						<label for="btn2" style="--i:2"></label>
+						<div class="img">
+							<img src="images/k-b-2.jpg" alt="">
+							<div class="right"> 
+								<a href="https://www.sohu.com/a/539476433_313745?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.2.16504335844667D2Anmf&_f=index_chan08news_1" >国家卫健委<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.sohu.com/a/539476433_313745?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.2.16504335844667D2Anmf&_f=index_chan08news_1">昨日新增本土确诊2753例、本土无症状感染者17066例</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn3">
+						<label for="btn3" style="--i:3"></label>
+						<div class="img">
+							<img src="images/k-b-3.jpg" alt="">
+							<div class="right">
+								<a href="https://new.qq.com/omn/20220420/20220420A0172E00.html ">“动态清零”<br/></a>
+								<div class="k-b-intro">
+									<a href="https://new.qq.com/omn/20220420/20220420A0172E00.html">才是最佳方案 </a> 
+								</div>
+							</div>							
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn4">
+						<label for="btn4" style="--i:4"></label>
+						<div class="img">
+							<img src="images/k-b-4.jpg" alt="">
+							<div class="right">
+								<a href="https://new.qq.com/omn/20220419/20220419A0D06900.html" >上海战“疫”<br/></a>
+								<div class="k-b-intro">
+									<a href="https://new.qq.com/omn/20220419/20220419A0D06900.html">他们的身影很帅</a> 
+								</div>																
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn5">
+						<label for="btn5" style="--i:5"></label>
+						<div class="img">
+							<img src="images/k-b-5.jpg" alt="">
+							<div class="right">
+								<a href="https://new.qq.com/omn/20220419/20220419A00VVE00.html" >“躺平”<br/></a>
+								<div class="k-b-intro">
+									<a href="https://new.qq.com/omn/20220419/20220419A00VVE00.html">危害全球抗疫</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn6">
+						<label for="btn6" style="--i:6"></label>
+						<div class="img">
+							<img src="images/k-b-6.jpg" alt="">
+							<div class="right">
+								<a href="https://www.sohu.com/a/538848650_121333743?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.1.16504335844667D2Anmf&_f=index_chan08news_0" >上海昨日再增<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.sohu.com/a/538848650_121333743?editor=%E9%92%9F%E5%BA%86%E8%BE%89%20UN660&scm=1104.0.0.0&spm=smpc.news-home.top-news2.1.16504335844667D2Anmf&_f=index_chan08news_0">7例本土死亡病例 首现非老年人死亡病例 </a> 
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>		
+
+		<!---news-card--->
+		<div class="n-c-title">
+			<h1>----- 推 荐 新 闻 -----</h1>
+		</div>
+		<div class="n-c-container">			
+			<div class="card">
+				<img src="images/n-c-1.jpg" alt="">
+				<div class="text">
+					<a href="http://henan.china.com.cn/m/2022-04/20/content_41945056.html">
+						<h2>全球七地 <span>放宽</span> 旅行限制</h2>
+						<p>疫情仍呈现区域性多点暴发态势</p>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/n-c-2.jpg" alt="">
+				<div class="text">
+					<a href="https://m.gmw.cn/baijia/2022-04/10/1302891582.html">
+						<h2>如何 <span>做好</span> 个人防护</h2>
+						<p>公众外出乘坐公共交通工具</p>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/n-c-3.jpg" alt="">
+				<div class="text">
+					<a href="https://3g.163.com/dy/article/H5IN43OP05329F33.html">
+						<h2>疫情下的 <span>食物供应链</span> </h2>
+						<p>危机与机遇</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="n-c-container2">
+			<div class="card">
+				<img src="images/n-c-4.jpg" alt="">
+				<div class="text">
+					<a href="https://new.qq.com/omn/20220205/20220205A07O0U00.html">
+						<h2>疫情中的 <span>春运</span> </h2>
+						<p>致敬“平凡的铁路人”</p>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/n-c-5.jpg" alt="">
+				<div class="text">
+					<a href="http://news.sohu.com/a/539290621_121123770">
+						<h2>集中 <span>消杀</span> 再出击</h2>
+						<p>各街道集中开展消毒清洁行动</p>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/n-c-6.jpg" alt="">
+				<div class="text">
+					<a href="https://baijiahao.baidu.com/s?id=1730547130922777654&wfr=spider&for=pc">
+						<h2>减轻 <span>防疫</span> 负担</h2>
+						<p>国家医保局：继续降低疫苗、核酸检测等价格</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!---Moving story--->
+		<div class="m-s-title">
+			<h1>----- 感 动 人 物 -----</h1>
+		</div>
+		<div class="m-s">
+			<div class="m-s-container">
+				<div class="item1 active" style="background-image: url(images/m-s-1.jpg);">
+					<a href="https://www.163.com/dy/article/H5DH6F9K0514TTJI.html">
+					    <div class="shadow"></div>
+					</a>
+					<div class="content">
+						<div class="icon">
+							<i class="fa-solid fa-hand-back-point-up"></i>
+						</div>
+						<div class="text">
+							<div class="tit">大丰医师吴华斌</div>
+							<div class="sub">最美基层人物：抗击疫情最美逆行者</div>
+						</div>
+					</div>
+				</div>
+				<div class="item1" style="background-image: url(images/m-s-2.jpg);">
+					<<a href="http://k.sina.com.cn/article_5444885376_1448a5b8002001dmj3.html">
+						<div class="shadow"></div>
+					</a>	
+					<div class="content">
+						<div class="icon">
+							<i class="fa-solid fa-hand-back-point-up"></i>
+						</div>
+						<div class="text">
+							<div class="tit">网格办主任陈远江</div>
+							<div class="sub">基层人物：深耕网格“责任田”，答好疫情“防控卷”</div>
+						</div>
+					</div>
+				</div>
+				<div class="item1" style="background-image: url(images/m-s-3.jpg);">
+						<a href="https://www.163.com/dy/article/H5DF1F18055270UJ.html">
+						<div class="shadow"></div>
+					</a>	
+					<div class="content">
+						<div class="icon">
+							<i class="fa-solid fa-hand-back-point-up"></i>
+						</div>
+						<div class="text">
+							<div class="tit">顺丰快递小哥汪勇</div>
+							<div class="sub">武汉抗疫英雄:热血融化恐惧 责任抒写传奇</div>
+						</div>
+					</div>
+				</div>
+				<div class="item1" style="background-image: url(images/m-s-4.jpg);">
+						<a href="https://www.163.com/dy/article/H5B9ROR105392LH9.html"><div class="shadow"></div></a>
+					<div class="content">
+						<div class="icon">
+							<i class="fa-solid fa-hand-back-point-up"></i>
+						</div>
+						<div class="text">
+							<div class="tit">江苏政协委员唐冠玉</div>
+							<div class="sub">表率人物:抗疫战场即是履职阵地</div>
+						</div>
+					</div>
+				</div>
+				<div class="item1" style="background-image: url(images/m-s-5.jpg);">
+					<a href="https://new.qq.com/omn/20220102/20220102A08AWM00.html"><div class="shadow"></div></a>
+					<div class="content">
+						<div class="icon">
+							<i ></i>
+						</div>
+						<div class="text">
+							<div class="tit">武汉市金银潭医院院长张定宇</div>
+							<div class="sub">2020年感动中国十大人物</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="js/news.js"></script>
+		</div>
+		<div class="clear"></div>
+		
+		<!-- 搜索区 -->
+		<div class="n-s">
+			<div class="wrapper">
+					<input type="text" class="input" placeholder='请在这里查询你想要的新闻……?'>
+					<div class="searchbtn" background:url('../images/search.png');>
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+		</div>
+		
+		
+		<!-- 信息流 -->
+		<div class="information-flow">
+			<div class="n-i-wrap">
+				<div class="n-i-c">
+					<div class="n-i-content">
+						<a href="http://henan.china.com.cn/m/2022-04/20/content_41945056.html">
+							<img src="images/nif1.jpg" class="img-responsive" alt="">
+							<h4>全球七地放宽旅行限制 </h4>
+							<p>4月17日起，全球又有七个国家及地区进一步放宽了旅行限制。包括新西兰、奥地利、苏格兰、塞浦路斯、澳大利亚、韩国、美国加州在内，这意味着，旅行对旅行者来说变得更容易。业内人士表示，目前，新冠肺炎疫情在全球尚未得到完全控制，仍呈现区域性多点暴发态势。部分国家对于放宽旅行限制均是为谨慎前行。由于国情不同，许多政策在实施过程中，效果尚处于观察之中……</p>
+						</a>
+					</div>					
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="n-i-wrap">
+				<div class="n-i-c">
+					<div class="n-i-content">
+						<a href="http://news.sohu.com/a/539290621_121123770">
+							<img src="images/nif2.jpg" class="img-responsive" alt="">
+							<h4>【“疫”不容辞】集中消杀再出击——各街道集中开展消毒清洁行动</h4>
+							<p>打好抗疫组合拳，打赢消杀阻击战。为切断疫情传播途径，切实巩固防控成果，尽快恢复和保持正常的生产、生活秩序，龙潭区于4月17日-19日集中开展消毒清洁行动，统筹力量、组织专班，多管齐下，对城市道路、公共环卫设施、办公场所、住宅小区、企业经营场所、垃圾收运处置场所等开展“全方位、地毯式、多频次、全流程”环境消杀作业，全面加大消杀工作力度，坚决打赢疫情防控歼灭战……</p>
+						</a>
+					</div>					
+					<div class="clear"></div>
+				</div>
+			</div>			
+			<div class="n-i-wrap">
+				<div class="n-i-c">
+					<div class="n-i-content">
+						<a href="https://3g.163.com/dy/article/H5IN43OP05329F33.html">
+							<img src="images/nif3.jpg" class="img-responsive" alt="">
+							<h4>在疫情下农食供应链思考，如何保障超级城市的“菜篮子”？</h4>
+							<p>“京东敢死队”刷屏朋友圈，其实，除京东外，还有不少公司坚守在自己的阵地上。35斗采访调研了一批农业食品相关企业，包括美村科技、丰科生物、水木九天、本来生活、钱大妈、百果园、布瑞克等，忙是大家的常态，保供工作均排在首要位置。如《从业者自述：为什么把菜送到上海这么难》一文提到，疫情之下的保供工作面临诸多困难，主要集中在供应链上，比如运力紧张、物流不畅、人手不足等……</p>
+						</a>
+					</div>				
+					<div class="clear"></div>
+				</div>
+			</div>			
+			<div class="clear"></div>
+		</div>
+		
+		<!---famous web--->
+		<div class="n-ddl">
+			<!-- <a><img src="images/ddl.png"/></a> -->
+		</div>
+		
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+		
+		
+	</body>
+</html>

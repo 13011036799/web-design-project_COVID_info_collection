@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-可视化页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/styl_vi.css" rel="stylesheet" type="text/css"  media="all" />
+		<link rel="stylesheet" href="css/iconfont.css">
+		
+		<link rel="stylesheet" href="css/data_visual.css" />
+		<!-- 引入刚刚下载的 ECharts 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<script src="js/flexible.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/china.js"></script>
+		<script src="js/world.js"></script>
+		<script src="js/data_visual.js"></script>
+		<script src="js/myMap.js"></script>
+		<!-- <script src="js/jquery.js"></script> -->
+
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>
+		<div class="clear"> </div>
+
+		<div class="menu-box">
+		    <!-- 展示与隐藏侧边栏 开始-->
+		    <input type="checkbox" id="menu-btn">
+		    <label for="menu-btn"><i class="iconfont icon-yemianfanhui"></i></label>
+		    <!-- 展示与隐藏侧边栏 结束-->
+		    <div class="menu">
+		        <!-- 侧边栏的标题 开始-->
+		        <div class="menu-title">
+		            <h1>时间轴面板</h1>
+		        </div>
+		        <!-- 侧边栏的标题 结束-->
+					
+		        <!-- 每一项导航 -->
+		        <div class="menu-item">
+		            <input type="checkbox" id="menu-item1">
+		            <label for="menu-item1">
+		                <i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+		                <span>2019年</span>
+		                <i class="menu-item-last iconfont icon-down"></i>
+		            </label>
+		            <div class="menu-content" >
+						<a href="v1.html"><span >···12月···</span></a>
+		            </div>
+		        </div>
+					
+		        <div class="menu-item">
+		            <input type="checkbox" id="menu-item2">
+		            <label for="menu-item2">
+		                <i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+		                <span>2020年</span>
+		                <i class="menu-item-last iconfont icon-down"></i>
+		            </label>
+		            <div class="menu-content">
+		                <a href="v2.html"><span>···1月···</span></a>
+		                <span>···2月···</span>
+		                <span>···3月···</span>
+		                <span>···4月···</span>
+		                <span>···5月···</span>
+		                <span>···6月···</span>
+		                <span>···7月···</span>
+		                <span>···8月···</span>
+		                <span>···9月···</span>
+		                <span>···10月···</span>
+		                <span>···11月···</span>
+		                <span>···12月···</span>
+		            </div>
+		        </div>
+					
+		        <div class="menu-item">
+		            <input type="checkbox" id="menu-item3">
+		            <label for="menu-item3">
+		                <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+		                <span>2021年</span>
+		                <i class="menu-item-last iconfont icon-down"></i>
+		            </label>
+		            <div class="menu-content">
+		                <span>···1月···</span>
+		                <span>···2月···</span>
+		                <span>···3月···</span>
+		                <span>···4月···</span>
+		                <span>···5月···</span>
+		                <span>···6月···</span>
+		                <span>···7月···</span>
+		                <span>···8月···</span>
+		                <span>···9月···</span>
+		                <span>···10月···</span>
+		                <span>···11月···</span>
+		                <span>···12月···</span>
+		            </div>
+		        </div>
+				
+				<div class="menu-item">
+				    <input type="checkbox" id="menu-item4">
+				    <label for="menu-item4">
+				        <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+				        <span>2022年</span>
+				        <i class="menu-item-last iconfont icon-down"></i>
+				    </label>
+				    <div class="menu-content">
+				        <span>···1月···</span>
+				        <span>···2月···</span>
+				        <span>···3月···</span>
+				        <span>···4月···</span>
+				    </div>
+				</div>
+				
+		        <div class="set-line"></div>
+
+				<div class="clear"> </div>
+		    </div>
+			<div class="clear"> </div>
+		</div>
+
+
+
+
+		
+
+
+
+		<div class="data_box">
+			<div class="vi_top_space"></div>
+			<div class="all_title">
+				<h2>- - - - - - 疫 情 数 据 可 视 化 - - - - - -</h2>
+			</div>
+			<div class="showTime">
+				<script>
+					var t = null;
+					t = setTimeout(time, 1000); //開始运行
+					function time() {
+						clearTimeout(t); //清除定时器
+						dt = new Date();
+						var y = dt.getFullYear();
+						var mt = dt.getMonth() + 1;
+						var day = dt.getDate();
+						var h = dt.getHours(); //获取时
+						var m = dt.getMinutes(); //获取分
+						var s = dt.getSeconds(); //获取秒
+						document.querySelector(".showTime").innerHTML =
+							"当前时间：" +
+							y +
+							"年" +
+							mt +
+							"月" +
+							day +
+							"日-" +
+							h +
+							"时" +
+							m +
+							"分" +
+							s +
+							"秒";
+						t = setTimeout(time, 1000); //设定定时器，循环运行
+					}
+				</script>
+
+			</div>
+			<div class="bo_box">
+				<div class="bo_title">
+					<h2>
+						< 国 内 疫 情 数 据 可 视 化>
+					</h2>
+				</div>
+				<div class="bo_digit">
+					<div class="bo_num">
+						<h3>无症状感染者</h3>
+						<p>111906</p>
+					</div>
+					<div class="bo_num">
+						<h3>境外输入病例</h3>
+						<p>18256</p>
+					</div>
+					<div class="bo_num">
+						<h3>大陆现有确诊</h3>
+						<p>11352</p>
+					</div>
+					<div class="bo_num">
+						<h3>全国现有确诊</h3>
+						<p>527166</p>
+					</div>
+					<div class="bo_num">
+						<h3>全国累计确诊</h3>
+						<p>818779</p>
+					</div>
+					<div class="bo_num">
+						<h3>全国累计死亡</h3>
+						<p>15393</p>
+					</div>
+					<div class="bo_num">
+						<h3>全国累计治愈</h3>
+						<p>276220</p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="map_title">
+				<h3>中 国 各 省 份 疫 情 数 据 地 图</h3>
+			</div>
+			<div id="bo_map"></div>
+			<script type="text/javascript">
+				// 基于准备好的dom，初始化echarts实例
+				var myChart = echarts.init(document.getElementById('bo_map'));
+				myChart.showLoading();
+				$.get('https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json', function(geoJson) {
+					myChart.hideLoading();
+					echarts.registerMap('china', geoJson);
+					myChart.setOption(
+						(option = {
+							title: {
+								// text: '中 国 各 省 份 疫 情 数 据 地 图',
+								// left = '20%',
+							},
+							tooltip: {
+								trigger: 'item',
+								formatter: function(params) {
+									//定义一个res变量来保存最终返回的字符结果,并且先把地区名称放到里面
+									var res = params.name + '<br />';
+									//定义一个变量来保存series数据系列
+									var myseries = option.series;
+									//循环遍历series数据系列
+									for (var i = 0; i < myseries.length; i++) {
+										//在内部继续循环series[i],从data中判断：当地区名称等于params.name的时候就将当前数据和名称添加到res中供显示
+										for (var k = 0; k < myseries[i].data.length; k++) {
+											//console.log(myseries[i].data[k].name);
+											//如果data数据中的name和地区名称一样
+											if (myseries[i].data[k].name == params.name) {
+												//将series数据系列每一项中的name和数据系列中当前地区的数据添加到res中
+												res += myseries[i].name + ':' + myseries[i].data[k].value +
+													'<br />';
+											}
+										}
+									}
+									return res;
+								}
+							},
+							// legend: {
+							// 	orient: 'vertical',
+							// 	x:'left',
+							// 	data: ['现有确诊人数', '累计确诊人数', '累计死亡人数', '累计治愈人数']
+							// },
+							toolbox: {
+								show: true,
+								orient: 'vertical',
+								left: 'right',
+								top: 'center',
+								feature: {
+									dataView: {
+										readOnly: false
+									},
+									restore: {},
+									saveAsImage: {}
+								}
+							},
+
+							series: [{
+									name: '现有确诊人数',
+									type: 'map',
+									map: 'china',
+
+									label: {
+										show: false
+									},
+
+									itemStyle: {
+										areaColor: 'rgba(56, 137, 201, 0.2)',
+										borderColor: '#ffffff',
+									},
+
+									emphasis: {
+										itemStyle: {
+											areaColor: 'rgba(56, 137, 201, 0.5)',
+
+											focus: "series",
+											label: {
+												show: true,
+												formatter: "function (param) { return param.data[3]; }",
+												position: "top",
+											}
+										},
+									},
+
+
+
+									data: [{
+											name: '香港特别行政区',
+											value: 261718
+										},
+										{
+											name: '台湾省',
+											value: 253931
+										},
+										{
+											name: '上海市',
+											value: 8720
+										},
+										{
+											name: '浙江省',
+											value: 554
+										},
+										{
+											name: '吉林省',
+											value: 505
+										},
+										{
+											name: '北京市',
+											value: 502
+										},
+										{
+											name: '广东省',
+											value: 176
+										},
+										{
+											name: '江西省',
+											value: 146
+										},
+										{
+											name: '黑龙江省',
+											value: 144
+										},
+										{
+											name: '河南省',
+											value: 79
+										},
+										{
+											name: '四川省',
+											value: 69
+										},
+										{
+											name: '山东省',
+											value: 65
+										},
+										{
+											name: '福建省',
+											value: 55
+										},
+										{
+											name: '内蒙古自治区',
+											value: 51
+										},
+										{
+											name: '辽宁省',
+											value: 37
+										},
+										{
+											name: '湖南省',
+											value: 26
+										},
+										{
+											name: '江苏省',
+											value: 23
+										},
+										{
+											name: '山西省',
+											value: 19
+										},
+										{
+											name: '广西壮族自治区',
+											value: 17
+										},
+										{
+											name: '海南省',
+											value: 16
+										},
+										{
+											name: '云南省',
+											value: 14
+										},
+										{
+											name: '青海省',
+											value: 13
+										},
+										{
+											name: '河北省',
+											value: 13
+										},
+										{
+											name: '重庆市',
+											value: 6
+										},
+										{
+											name: '安徽省',
+											value: 6
+										},
+										{
+											name: '湖北省',
+											value: 2
+										},
+										{
+											name: '新疆维吾尔自治区',
+											value: 1
+										},
+										{
+											name: '贵州省',
+											value: 1
+										},
+										{
+											name: '西藏自治区',
+											value: 0
+										},
+										{
+											name: '陕西省',
+											value: 0
+										},
+										{
+											name: '天津市',
+											value: 0
+										},
+										{
+											name: '甘肃省',
+											value: 0
+										},
+										{
+											name: '宁夏回族自治区',
+											value: 0
+										},
+										{
+											name: '澳门特别行政区',
+											value: 0
+										},
+										{
+											name: '南海诸岛',
+											value: 0
+										},
+									],
+
+								},
+
+
+								{
+									name: '累计确诊人数',
+									type: 'map',
+									map: 'china',
+
+									label: {
+										show: false
+									},
+
+									itemStyle: {
+										areaColor: 'rgba(56, 137, 201, 0.2)',
+										borderColor: '#ffffff',
+									},
+
+									emphasis: {
+										itemStyle: {
+											areaColor: 'rgba(56, 137, 201, 0.5)',
+
+											focus: "series",
+											label: {
+												show: true,
+												formatter: "function (param) { return param.data[3]; }",
+												position: "top",
+											}
+										},
+									},
+
+
+
+									data: [{
+											name: '香港特别行政区',
+											value: 331181
+										},
+										{
+											name: '台湾省',
+											value: 268569
+										},
+										{
+											name: '上海市',
+											value: 60113
+										},
+										{
+											name: '浙江省',
+											value: 3124
+										},
+										{
+											name: '吉林省',
+											value: 40251
+										},
+										{
+											name: '北京市',
+											value: 2387
+										},
+										{
+											name: '广东省',
+											value: 7134
+										},
+										{
+											name: '江西省',
+											value: 1383
+										},
+										{
+											name: '黑龙江省',
+											value: 2982
+										},
+										{
+											name: '河南省',
+											value: 2961
+										},
+										{
+											name: '四川省',
+											value: 2066
+										},
+										{
+											name: '山东省',
+											value: 2731
+										},
+										{
+											name: '福建省',
+											value: 3051
+										},
+										{
+											name: '内蒙古自治区',
+											value: 1752
+										},
+										{
+											name: '辽宁省',
+											value: 1655
+										},
+										{
+											name: '湖南省',
+											value: 1389
+										},
+										{
+											name: '江苏省',
+											value: 2213
+										},
+										{
+											name: '山西省',
+											value: 420
+										},
+										{
+											name: '广西壮族自治区',
+											value: 1592
+										},
+										{
+											name: '海南省',
+											value: 288
+										},
+										{
+											name: '云南省',
+											value: 2120
+										},
+										{
+											name: '青海省',
+											value: 95
+										},
+										{
+											name: '河北省',
+											value: 2002
+										},
+										{
+											name: '重庆市',
+											value: 700
+										},
+										{
+											name: '安徽省',
+											value: 1065
+										},
+										{
+											name: '湖北省',
+											value: 68398
+										},
+										{
+											name: '新疆维吾尔自治区',
+											value: 1008
+										},
+										{
+											name: '贵州省',
+											value: 180
+										},
+										{
+											name: '西藏自治区',
+											value: 1
+										},
+										{
+											name: '陕西省',
+											value: 3277
+										},
+										{
+											name: '天津市',
+											value: 1804
+										},
+										{
+											name: '甘肃省',
+											value: 681
+										},
+										{
+											name: '宁夏回族自治区',
+											value: 122
+										},
+										{
+											name: '澳门特别行政区',
+											value: 82
+										},
+									],
+
+								},
+
+
+
+
+
+								{
+									name: '累计死亡人数',
+									type: 'map',
+									map: 'china',
+
+									label: {
+										show: false
+									},
+
+									itemStyle: {
+										areaColor: 'rgba(56, 137, 201, 0.2)',
+										borderColor: '#ffffff',
+									},
+
+									emphasis: {
+										itemStyle: {
+											areaColor: 'rgba(56, 137, 201, 0.5)',
+
+											focus: "series",
+											label: {
+												show: true,
+												formatter: "function (param) { return param.data[3]; }",
+												position: "top",
+											}
+										},
+									},
+
+
+
+									data: [{
+											name: '香港特别行政区',
+											value: 9344
+										},
+										{
+											name: '台湾省',
+											value: 896
+										},
+										{
+											name: '上海市',
+											value: 522
+										},
+										{
+											name: '浙江省',
+											value: 1
+										},
+										{
+											name: '吉林省',
+											value: 5
+										},
+										{
+											name: '北京市',
+											value: 9
+										},
+										{
+											name: '广东省',
+											value: 8
+										},
+										{
+											name: '江西省',
+											value: 1
+										},
+										{
+											name: '黑龙江省',
+											value: 13
+										},
+										{
+											name: '河南省',
+											value: 22
+										},
+										{
+											name: '四川省',
+											value: 3
+										},
+										{
+											name: '山东省',
+											value: 7
+										},
+										{
+											name: '福建省',
+											value: 1
+										},
+										{
+											name: '内蒙古自治区',
+											value: 1
+										},
+										{
+											name: '辽宁省',
+											value: 2
+										},
+										{
+											name: '湖南省',
+											value: 4
+										},
+										{
+											name: '江苏省',
+											value: 0
+										},
+										{
+											name: '山西省',
+											value: 0
+										},
+										{
+											name: '广西壮族自治区',
+											value: 2
+										},
+										{
+											name: '海南省',
+											value: 6
+										},
+										{
+											name: '云南省',
+											value: 2
+										},
+										{
+											name: '青海省',
+											value: 0
+										},
+										{
+											name: '河北省',
+											value: 7
+										},
+										{
+											name: '重庆市',
+											value: 6
+										},
+										{
+											name: '安徽省',
+											value: 6
+										},
+										{
+											name: '湖北省',
+											value: 4512
+										},
+										{
+											name: '新疆维吾尔自治区',
+											value: 3
+										},
+										{
+											name: '贵州省',
+											value: 2
+										},
+										{
+											name: '西藏自治区',
+											value: 0
+										},
+										{
+											name: '陕西省',
+											value: 3
+										},
+										{
+											name: '天津市',
+											value: 3
+										},
+										{
+											name: '甘肃省',
+											value: 2
+										},
+										{
+											name: '宁夏回族自治区',
+											value: 0
+										},
+										{
+											name: '澳门特别行政区',
+											value: 0
+										},
+									],
+
+								},
+
+
+
+
+								{
+									name: '累计治愈人数',
+									type: 'map',
+									map: 'china',
+
+									label: {
+										show: false
+									},
+
+									itemStyle: {
+										areaColor: 'rgba(56, 137, 201, 0.2)',
+										borderColor: '#ffffff',
+									},
+
+									emphasis: {
+										itemStyle: {
+											areaColor: 'rgba(56, 137, 201, 0.5)',
+
+											focus: "series",
+											label: {
+												show: true,
+												formatter: "function (param) { return param.data[3]; }",
+												position: "top",
+											}
+										},
+									},
+
+
+
+									data: [{
+											name: '香港特别行政区',
+											value: 60119
+										},
+										{
+											name: '台湾省',
+											value: 13742
+										},
+										{
+											name: '上海市',
+											value: 50871
+										},
+										{
+											name: '浙江省',
+											value: 2569
+										},
+										{
+											name: '吉林省',
+											value: 39741
+										},
+										{
+											name: '北京市',
+											value: 1876
+										},
+										{
+											name: '广东省',
+											value: 6950
+										},
+										{
+											name: '江西省',
+											value: 1236
+										},
+										{
+											name: '黑龙江省',
+											value: 2825
+										},
+										{
+											name: '河南省',
+											value: 2860
+										},
+										{
+											name: '四川省',
+											value: 1994
+										},
+										{
+											name: '山东省',
+											value: 2659
+										},
+										{
+											name: '福建省',
+											value: 2995
+										},
+										{
+											name: '内蒙古自治区',
+											value: 1700
+										},
+										{
+											name: '辽宁省',
+											value: 1616
+										},
+										{
+											name: '湖南省',
+											value: 1359
+										},
+										{
+											name: '江苏省',
+											value: 2190
+										},
+										{
+											name: '山西省',
+											value: 401
+										},
+										{
+											name: '广西壮族自治区',
+											value: 1573
+										},
+										{
+											name: '海南省',
+											value: 266
+										},
+										{
+											name: '云南省',
+											value: 2104
+										},
+										{
+											name: '青海省',
+											value: 82
+										},
+										{
+											name: '河北省',
+											value: 1982
+										},
+										{
+											name: '重庆市',
+											value: 688
+										},
+										{
+											name: '安徽省',
+											value: 1053
+										},
+										{
+											name: '湖北省',
+											value: 63884
+										},
+										{
+											name: '新疆维吾尔自治区',
+											value: 1004
+										},
+										{
+											name: '贵州省',
+											value: 177
+										},
+										{
+											name: '西藏自治区',
+											value: 1
+										},
+										{
+											name: '陕西省',
+											value: 3274
+										},
+										{
+											name: '天津市',
+											value: 1801
+										},
+										{
+											name: '甘肃省',
+											value: 679
+										},
+										{
+											name: '宁夏回族自治区',
+											value: 122
+										},
+										{
+											name: '澳门特别行政区',
+											value: 82
+										},
+									],
+
+								},
+
+
+
+
+
+
+
+
+
+
+							]
+						})
+					);
+				});
+			</script>
+
+			<div class="bo_figures">
+				<div class="figure_title1">
+					<h3>近 60 天 疫 情 状 况</h3>
+				</div>
+				<div class="bo_figure">
+					<div id="linear"></div>
+					<script type="text/javascript">
+						var chartDom = document.getElementById('linear');
+						var myChart2 = echarts.init(chartDom);
+						var option2;
+
+						option2 = {
+							tooltip: {
+								trigger: 'axis'
+							},
+
+							legend: {
+								data: ['输入病例', '大陆新增确诊', '全国新增确诊']
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							toolbox: {
+								feature: {
+									saveAsImage: {}
+								}
+							},
+							xAxis: {
+								type: 'category',
+								boundaryGap: false,
+								data: ['03.06',
+									'03.07',
+									'03.08',
+									'03.09',
+									'03.10',
+									'03.11',
+									'03.12',
+									'03.13',
+									'03.14',
+									'03.15',
+									'03.16',
+									'03.17',
+									'03.18',
+									'03.19',
+									'03.20',
+									'03.21',
+									'03.22',
+									'03.23',
+									'03.24',
+									'03.25',
+									'03.26',
+									'03.27',
+									'03.28',
+									'03.29',
+									'03.30',
+									'03.31',
+									'04.01',
+									'04.02',
+									'04.03',
+									'04.04',
+									'04.05',
+									'04.06',
+									'04.07',
+									'04.09',
+									'04.10',
+									'04.11',
+									'04.12',
+									'04.13',
+									'04.14',
+									'04.15',
+									'04.16',
+									'04.17',
+									'04.18',
+									'04.19',
+									'04.20',
+									'04.21',
+									'04.22',
+									'04.23',
+									'04.24',
+									'04.25',
+									'04.26',
+									'04.27',
+									'04.28',
+									'04.29',
+									'04.30',
+									'05.01',
+									'05.02',
+									'05.03',
+									'05.04',
+									'05.05'
+								]
+							},
+							yAxis: {
+								type: 'value'
+							},
+							series: [{
+									name: '输入病例',
+									type: 'line',
+									stack: 'Total',
+									data: ['113',
+										'150',
+										'104',
+										'126',
+										'158',
+										'112',
+										'131',
+										'100',
+										'95',
+										'92',
+										'91',
+										'73',
+										'71',
+										'81',
+										'80',
+										'57',
+										'76',
+										'44',
+										'65',
+										'55',
+										'37',
+										'56',
+										'65',
+										'64',
+										'36',
+										'40',
+										'43',
+										'51',
+										'39',
+										'62',
+										'32',
+										'39',
+										'36',
+										'33',
+										'20',
+										'21',
+										'13',
+										'21',
+										'14',
+										'29',
+										'25',
+										'19',
+										'19',
+										'8',
+										'11',
+										'14',
+										'17',
+										'14',
+										'14',
+										'15',
+										'6',
+										'9',
+										'13',
+										'14',
+										'4',
+										'4',
+										'16',
+										'9',
+										'13',
+										'18'
+									]
+								},
+								{
+									name: '大陆新增确诊',
+									type: 'line',
+									stack: 'Total',
+									data: ['214',
+										'175',
+										'233',
+										'402',
+										'397',
+										'476',
+										'1807',
+										'1337',
+										'3507',
+										'1860',
+										'1226',
+										'2388',
+										'2157',
+										'1656',
+										'1947',
+										'2281',
+										'2591',
+										'2010',
+										'1301',
+										'1280',
+										'1217',
+										'1219',
+										'1228',
+										'1565',
+										'1803',
+										'1787',
+										'2086',
+										'1455',
+										'1366',
+										'1173',
+										'1383',
+										'1284',
+										'1540',
+										'1318',
+										'1164',
+										'1251',
+										'1500',
+										'2999',
+										'3472',
+										'3867',
+										'3504',
+										'2723',
+										'3297',
+										'2753',
+										'2830',
+										'2119',
+										'2971',
+										'1566',
+										'2666',
+										'1908',
+										'1818',
+										'1494',
+										'5646',
+										'1410',
+										'916',
+										'827',
+										'368',
+										'353',
+										'360',
+										'356'
+									]
+								},
+								{
+									name: '全国新增确诊',
+									type: 'line',
+									stack: 'Total',
+									data: ['19271',
+										'6089',
+										'15154',
+										'12384',
+										'8115',
+										'5759',
+										'5791',
+										'5944',
+										'7701',
+										'5467',
+										'4653',
+										'4654',
+										'4163',
+										'3551',
+										'3423',
+										'3563',
+										'3813',
+										'3218',
+										'3204',
+										'2093',
+										'2121',
+										'2164',
+										'2022',
+										'2164',
+										'2666',
+										'2593',
+										'14288',
+										'8570',
+										'2163',
+										'1954',
+										'2263',
+										'2097',
+										'3096',
+										'2049',
+										'2009',
+										'2097',
+										'3048',
+										'4009',
+										'4547',
+										'5451',
+										'4944',
+										'4305',
+										'5186',
+										'4582',
+										'5616',
+										'5309',
+										'7030',
+										'23314',
+										'8923',
+										'7259',
+										'8251',
+										'10561',
+										'18157',
+										'13842',
+										'16121',
+										'17973',
+										'18285',
+										'23603',
+										'28951',
+										'30473'
+									]
+								},
+							]
+						};
+
+						option2 && myChart2.setOption(option2);
+					</script>
+				</div>
+				<div class="bo_figure">
+					<div id="linear2"></div>
+					<script type="text/javascript">
+						var chartDom3 = document.getElementById('linear2');
+						var myChart3 = echarts.init(chartDom3);
+						var option3;
+
+						option3 = {
+							tooltip: {
+								trigger: 'axis'
+							},
+
+							legend: {
+								data: ['死亡人数', '死亡率', '治愈人数', '治愈率']
+							},
+							grid: {
+								left: '3%',
+								right: '4%',
+								bottom: '3%',
+								containLabel: true
+							},
+							toolbox: {
+								feature: {
+									saveAsImage: {}
+								}
+							},
+							xAxis: {
+								type: 'category',
+								boundaryGap: false,
+								data: ['03.06',
+									'03.07',
+									'03.08',
+									'03.09',
+									'03.10',
+									'03.11',
+									'03.12',
+									'03.13',
+									'03.14',
+									'03.15',
+									'03.16',
+									'03.17',
+									'03.18',
+									'03.19',
+									'03.20',
+									'03.21',
+									'03.22',
+									'03.23',
+									'03.24',
+									'03.25',
+									'03.26',
+									'03.27',
+									'03.28',
+									'03.29',
+									'03.30',
+									'03.31',
+									'04.01',
+									'04.02',
+									'04.03',
+									'04.04',
+									'04.05',
+									'04.06',
+									'04.07',
+									'04.09',
+									'04.10',
+									'04.11',
+									'04.12',
+									'04.13',
+									'04.14',
+									'04.15',
+									'04.16',
+									'04.17',
+									'04.18',
+									'04.19',
+									'04.20',
+									'04.21',
+									'04.22',
+									'04.23',
+									'04.24',
+									'04.25',
+									'04.26',
+									'04.27',
+									'04.28',
+									'04.29',
+									'04.30',
+									'05.01',
+									'05.02',
+									'05.03',
+									'05.04',
+									'05.05'
+								]
+							},
+							yAxis: {
+								type: 'value'
+							},
+							series: [{
+									name: '死亡人数',
+									type: 'line',
+									stack: 'Total',
+									data: ['233',
+										'280',
+										'291',
+										'291',
+										'281',
+										'294',
+										'285',
+										'264',
+										'286',
+										'289',
+										'279',
+										'289',
+										'267',
+										'249',
+										'246',
+										'223',
+										'245',
+										'205',
+										'201',
+										'192',
+										'139',
+										'151',
+										'168',
+										'151',
+										'135',
+										'119',
+										'120',
+										'116',
+										'111',
+										'90',
+										'87',
+										'111',
+										'97',
+										'63',
+										'65',
+										'65',
+										'116',
+										'62',
+										'54',
+										'67',
+										'41',
+										'32',
+										'27',
+										'26',
+										'18',
+										'37',
+										'27',
+										'48',
+										'64',
+										'70',
+										'55',
+										'57',
+										'69',
+										'47',
+										'51',
+										'45',
+										'28',
+										'28',
+										'21',
+										'22',
+									]
+								},
+								{
+									name: '死亡率',
+									type: 'line',
+									stack: 'Total',
+									data: ['1.2',
+										'4.6',
+										'1.9',
+										'2.3',
+										'3.5',
+										'5.1',
+										'4.9',
+										'4.4',
+										'3.7',
+										'5.3',
+										'6.0',
+										'6.2',
+										'6.4',
+										'7.0',
+										'7.2',
+										'6.3',
+										'6.4',
+										'6.4',
+										'6.3',
+										'9.2',
+										'6.6',
+										'7.0',
+										'8.3',
+										'7.0',
+										'5.1',
+										'4.6',
+										'0.8',
+										'1.4',
+										'5.1',
+										'4.6',
+										'3.8',
+										'5.3',
+										'3.1',
+										'3.1',
+										'3.2',
+										'3.1',
+										'3.8',
+										'1.5',
+										'1.2',
+										'1.2',
+										'0.8',
+										'0.7',
+										'0.5',
+										'0.6',
+										'0.3',
+										'0.7',
+										'0.4',
+										'0.2',
+										'0.7',
+										'1.0',
+										'0.7',
+										'0.5',
+										'0.4',
+										'0.3',
+										'0.3',
+										'0.3',
+										'0.2',
+										'0.1',
+										'0.1',
+										'0.1'
+									]
+								},
+								{
+									name: '治愈人数',
+									type: 'line',
+									stack: 'Total',
+									data: ['806',
+										'498',
+										'959',
+										'933',
+										'1020',
+										'1028',
+										'1129',
+										'876',
+										'524',
+										'1061',
+										'1305',
+										'1449',
+										'1688',
+										'1521',
+										'1467',
+										'980',
+										'1938',
+										'2362',
+										'2111',
+										'2310',
+										'2446',
+										'1925',
+										'1591',
+										'2578',
+										'2872',
+										'2536',
+										'5781',
+										'3907',
+										'2719',
+										'2281',
+										'3357',
+										'2420',
+										'3358',
+										'3491',
+										'2256',
+										'2554',
+										'3468',
+										'3568',
+										'2937',
+										'4529',
+										'2408',
+										'2284',
+										'2320',
+										'2962',
+										'3056',
+										'2387',
+										'3371',
+										'2904',
+										'3151',
+										'2385',
+										'6587',
+										'2935',
+										'3165',
+										'3639',
+										'3635',
+										'4850',
+										'4428',
+										'2167',
+										'2287',
+										'1745'
+									]
+								},
+								{
+									name: '治愈率',
+									type: 'line',
+									stack: 'Total',
+									data: ['4.2',
+										'8.2',
+										'6.3',
+										'7.5',
+										'12.6',
+										'17.9',
+										'19.5',
+										'14.7',
+										'6.8',
+										'19.4',
+										'28.0',
+										'31.1',
+										'40.5',
+										'42.8',
+										'42.9',
+										'27.5',
+										'50.8',
+										'73.4',
+										'65.9',
+										'110.4',
+										'115.3',
+										'89.0',
+										'78.7',
+										'119.1',
+										'107.7',
+										'97.8',
+										'40.5',
+										'45.6',
+										'125.7',
+										'116.7',
+										'148.3',
+										'115.4',
+										'108.5',
+										'170.4',
+										'112.3',
+										'121.8',
+										'113.8',
+										'89.0',
+										'64.6',
+										'83.1',
+										'48.7',
+										'53.1',
+										'44.7',
+										'64.6',
+										'54.4',
+										'45.0',
+										'48.0',
+										'12.5',
+										'35.3',
+										'32.9',
+										'0.0',
+										'27.8',
+										'17.4',
+										'26.3',
+										'22.5',
+										'27.0',
+										'24.2',
+										'9.2',
+										'7.9',
+										'5.7'
+									]
+								},
+							]
+						};
+
+						option3 && myChart3.setOption(option3);
+					</script>
+				</div>
+			</div>
+
+			<div class="bo_figure2">
+				<div class="bar">
+					<div class="figure_title2">
+						<h3>中 国 疫 情 严 重 省 份 情 况</h3>
+					</div>
+
+					<div id="rose"></div>
+					<script type="text/javascript">
+						var chartDom4 = document.getElementById('rose');
+						var myChart4 = echarts.init(chartDom4);
+						var option4;
+
+						option4 = {
+							legend: {},
+							tooltip: {},
+							dataset: {
+								dimensions: ['地区', '现有确诊人数', '累计确诊人数', '累计死亡人数', '累计治愈人数'],
+								source: [{
+										地区: '香港',
+										现有确诊人数: 261718,
+										累计确诊人数: 331181,
+										累计死亡人数: 9344,
+										累计治愈人数: 60119
+									},
+									{
+										地区: '台湾',
+										现有确诊人数: 253931,
+										累计确诊人数: 268569,
+										累计死亡人数: 896,
+										累计治愈人数: 13742
+									},
+									{
+										地区: '上海',
+										现有确诊人数: 8720,
+										累计确诊人数: 60113,
+										累计死亡人数: 522,
+										累计治愈人数: 50871
+									},
+									{
+										地区: '浙江',
+										现有确诊人数: 554,
+										累计确诊人数: 3124,
+										累计死亡人数: 1,
+										累计治愈人数: 2569
+									},
+									{
+										地区: '吉林',
+										现有确诊人数: 505,
+										累计确诊人数: 40251,
+										累计死亡人数: 5,
+										累计治愈人数: 39741
+									},
+									{
+										地区: '北京',
+										现有确诊人数: 502,
+										累计确诊人数: 2387,
+										累计死亡人数: 9,
+										累计治愈人数: 1876
+									},
+
+								]
+							},
+							xAxis: {
+								type: 'category'
+							},
+							yAxis: {},
+							// Declare several bar series, each will be mapped
+							// to a column of dataset.source by default.
+							series: [{
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}]
+						};
+
+						option4 && myChart4.setOption(option4);
+					</script>
+				</div>
+				<div class="bar">
+					<div class="figure_title2">
+						<h3>上 海 各 区 疫 情 状 况</h3>
+					</div>
+					<div id="rose2"></div>
+					<script type="text/javascript">
+						var chartDom5 = document.getElementById('rose2');
+						var myChart5 = echarts.init(chartDom5);
+						var option5;
+
+						option5 = {
+							legend: {},
+							tooltip: {},
+							dataset: {
+								dimensions: ['省内地区', '现有确诊人数', '累计确诊人数', '累计死亡人数', '累计治愈人数'],
+								source: [{
+										省内地区: '浦东',
+										现有确诊人数: 2171,
+										累计确诊人数: 16820,
+										累计死亡人数: 1,
+										累计治愈人数: 14648
+									},
+									{
+										省内地区: '黄浦',
+										现有确诊人数: 2163,
+										累计确诊人数: 6222,
+										累计死亡人数: 0,
+										累计治愈人数: 4059
+									},
+									{
+										省内地区: '徐汇',
+										现有确诊人数: 1960,
+										累计确诊人数: 4515,
+										累计死亡人数: 1,
+										累计治愈人数: 2554
+									},
+									{
+										省内地区: '静安',
+										现有确诊人数: 1232,
+										累计确诊人数: 2907,
+										累计死亡人数: 1,
+										累计治愈人数: 1674
+									},
+									{
+										省内地区: '虹口',
+										现有确诊人数: 1167,
+										累计确诊人数: 3380,
+										累计死亡人数: 0,
+										累计治愈人数: 2213
+									},
+									{
+										省内地区: '闵行',
+										现有确诊人数: 1116,
+										累计确诊人数: 5259,
+										累计死亡人数: 0,
+										累计治愈人数: 4143
+									},
+									{
+										省内地区: '杨浦',
+										现有确诊人数: 964,
+										累计确诊人数: 1880,
+										累计死亡人数: 0,
+										累计治愈人数: 916
+									},
+									{
+										省内地区: '宝山',
+										现有确诊人数: 888,
+										累计确诊人数: 2832,
+										累计死亡人数: 1,
+										累计治愈人数: 1943
+									},
+									{
+										省内地区: '长宁',
+										现有确诊人数: 803,
+										累计确诊人数: 2377,
+										累计死亡人数: 0,
+										累计治愈人数: 1574
+									},
+									{
+										省内地区: '普陀',
+										现有确诊人数: 596,
+										累计确诊人数: 1737,
+										累计死亡人数: 0,
+										累计治愈人数: 1141
+									},
+									{
+										省内地区: '青浦',
+										现有确诊人数: 300,
+										累计确诊人数: 1287,
+										累计死亡人数: 0,
+										累计治愈人数: 987
+									},
+									{
+										省内地区: '崇明',
+										现有确诊人数: 208,
+										累计确诊人数: 383,
+										累计死亡人数: 0,
+										累计治愈人数: 175
+									},
+									{
+										省内地区: '松江',
+										现有确诊人数: 168,
+										累计确诊人数: 2887,
+										累计死亡人数: 0,
+										累计治愈人数: 2719
+									},
+									{
+										省内地区: '奉贤',
+										现有确诊人数: 86,
+										累计确诊人数: 230,
+										累计死亡人数: 0,
+										累计治愈人数: 144
+									},
+									{
+										省内地区: '嘉定',
+										现有确诊人数: 73,
+										累计确诊人数: 2361,
+										累计死亡人数: 2,
+										累计治愈人数: 2286
+									},
+									{
+										省内地区: '金山',
+										现有确诊人数: 6,
+										累计确诊人数: 332,
+										累计死亡人数: 0,
+										累计治愈人数: 326
+									},
+								]
+							},
+							xAxis: {
+								type: 'category'
+							},
+							yAxis: {},
+							// Declare several bar series, each will be mapped
+							// to a column of dataset.source by default.
+							series: [{
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}, {
+								type: 'bar'
+							}]
+						};
+
+						option5 && myChart5.setOption(option5);
+					</script>
+				</div>
+
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="ab_box">
+				<div class="ab_title">
+					<h2>
+						< 国 外 疫 情 数 据 可 视 化>
+					</h2>
+				</div>
+				<div class="ab_digit">
+					<div class="ab_num">
+						<h3>新增确诊人数</h3>
+						<p>-80486</p>
+					</div>
+					<div class="ab_num">
+						<h3>当前确诊人数</h3>
+						<p>39039301</p>
+					</div>
+					<div class="ab_num">
+						<h3>累计确诊人数</h3>
+						<p>515853972</p>
+					</div>
+					<div class="ab_num">
+						<h3>新增死亡人数</h3>
+						<p>2501</p>
+					</div>
+					<div class="ab_num">
+						<h3>累计死亡人数</h3>
+						<p>6272170</p>
+					</div>
+					<div class="ab_num">
+						<h3>新增治愈人数</h3>
+						<p>659828</p>
+					</div>
+					<div class="ab_num">
+						<h3>累计治愈人数</h3>
+						<p>470542501</p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="map_title">
+				<h3>世 界 各 国 疫 情 数 据 地 图</h3>
+			</div>
+
+			<section class="mainbox">
+				<div class="column">
+					<!-- 地图模块 -->
+					<div class="map">
+						<div class="chart" id="viewDiv"></div>
+						<div class="panelFooter"></div>
+					</div>
+				</div>
+			</section>
+			<script src="js/flexible.js"></script>
+			<script src="js/world.js"></script>
+			<!-- <script src="js/echarts.min.js"></script> -->
+			<!--     <script src="js/arcgis.js"></script> -->
+			<script src="js/index.js"></script>
+			<script>
+				let res1, res2
+				$.ajax({
+						url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
+						type: 'get',
+						// data: {},
+						dataType: 'jsonp',
+					})
+					.then((data) => {
+						var res = data.data || "";
+						// console.log(JSON.parse(res).chinaTotal.heal)
+						res1 = JSON.parse(res).chinaTotal.confirm;
+						res2 = JSON.parse(res).chinaTotal.heal;
+						return $.ajax({
+							url: 'https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoGlobalStatis,FAutoContinentStatis,FAutoGlobalDailyList,FAutoCountryConfirmAdd',
+							type: 'get',
+							// data: {},
+							dataType: 'json',
+						})
+					})
+					.then((data) => {
+						// console.log(data)
+						let sum = data.data.FAutoGlobalStatis.confirm + res1
+						let cureSum = data.data.FAutoGlobalStatis.heal + res2
+						$(".no-hd li:first").text(sum)
+						$(".no-hd li:nth-child(2)").text(cureSum)
+					})
+			</script>
+
+
+			
+			<div class="ab_figures">
+				<div class="ab_figure_title1">
+					<h3>各 洲 累 计 死 亡 和 治 愈 人 数</h3>
+				</div>
+				<div class="ab_figure">
+					<div id="ab_rose"></div>
+					<script type="text/javascript">
+						var chartDom8 = document.getElementById('ab_rose');
+						var myChart8 = echarts.init(chartDom8);
+						var option8;
+
+						option8 = {
+							// title: {
+							//   text: 'Nightingale Chart',
+							//   subtext: 'Fake Data',
+							//   left: 'center'
+							// },
+							tooltip: {
+								trigger: 'item',
+								formatter: '{a} <br/>{b} : {c} ({d}%)'
+							},
+							legend: {
+								left: 'center',
+								top: 'bottom',
+								data: [
+									'rose1',
+									'rose2',
+									'rose3',
+									'rose4',
+									'rose5',
+									'rose6',
+									'rose7',
+									'rose8'
+								]
+							},
+							// toolbox: {
+							// 	show: true,
+							// 	feature: {
+							// 		mark: {
+							// 			show: true
+							// 		},
+							// 		dataView: {
+							// 			show: true,
+							// 			readOnly: false
+							// 		},
+							// 		restore: {
+							// 			show: true
+							// 		},
+							// 		saveAsImage: {
+							// 			show: true
+							// 		}
+							// 	}
+							// },
+							series: [{
+									name: '死亡人数',
+									type: 'pie',
+									radius: [20, 140],
+									center: ['25%', '50%'],
+									roseType: 'radius',
+									itemStyle: {
+										borderRadius: 5
+									},
+									// label: {
+									//   show: false
+									// },
+									emphasis: {
+										label: {
+											show: true
+										}
+									},
+									data: [{
+											value: 5816171,
+											name: '北美洲'
+										},
+										{
+											value: 5200905,
+											name: '亚洲'
+										},
+										{
+											value: 4708193,
+											name: '南美洲'
+										},
+										{
+											value: 4043182,
+											name: '欧洲'
+										},
+										{
+											value: 1740076,
+											name: '大洋洲'
+										},
+										{
+											value: 1567511,
+											name: '非洲'
+										},
+
+									]
+								},
+								{
+									name: '治愈人数',
+									type: 'pie',
+									radius: [20, 140],
+									center: ['75%', '50%'],
+									roseType: 'area',
+									itemStyle: {
+										borderRadius: 5
+									},
+									data: [{
+											value: 459014479,
+											name: '北美洲'
+										},
+										{
+											value: 378142430,
+											name: '亚洲'
+										},
+										{
+											value: 335594731,
+											name: '南美洲'
+										},
+										{
+											value: 305985637,
+											name: '欧洲'
+										},
+										{
+											value: 122299536,
+											name: '大洋洲'
+										},
+										{
+											value: 81725176,
+											name: '非洲'
+										},
+									]
+								}
+							]
+						};
+						option8 && myChart8.setOption(option8);
+					</script>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+			
+			<div class="ab_figure_title2">
+				<h3>各 洲 累 计 确 诊 人 数</h3>
+			</div>
+			<div class="bo_figure2">
+				<div class="ab_pie_all">
+					<div id="ab_pie"></div>
+					<script type="text/javascript">
+						var chartDom9 = document.getElementById('ab_pie');
+						var myChart9 = echarts.init(chartDom9);
+						var option9;
+						
+						option9 = {
+						  tooltip: {
+						    trigger: 'item'
+						  },
+						  legend: {
+						    top: '5%',
+						    left: 'center'
+						  },
+						  series: [
+						    {
+						      name: '累 计 确 诊 人 数',
+						      type: 'pie',
+						      radius: ['40%', '70%'],
+						      avoidLabelOverlap: false,
+						      itemStyle: {
+						        borderRadius: 10,
+						        borderColor: '#fff',
+						        borderWidth: 2
+						      },
+						      label: {
+						        show: false,
+						        position: 'center'
+						      },
+						      emphasis: {
+						        label: {
+						          show: true,
+						          fontSize: '40',
+						          fontWeight: 'bold'
+						        }
+						      },
+						      labelLine: {
+						        show: false
+						      },
+						      data: [
+						        { value: 480770373, name: '北美洲' },
+						        { value: 425254171, name: '亚洲' },
+						        { value: 387628488, name: '南美洲' },
+						        { value: 356978860, name: '欧洲' },
+						        { value: 130516196, name: '大洋洲' },
+								{ value: 121035155, name: '非洲' }
+						      ]
+						    }
+						  ]
+						};
+						
+						option9 && myChart9.setOption(option9);
+					</script>
+				</div>
+				
+				
+				<div class="ab_bar">
+					<div class="figure_title2">
+						<h3>疫 情 严 重 国 家 情 况</h3>
+					</div>
+					<div id="ab_bar_all"></div>
+					<script type="text/javascript">
+						var chartDom10 = document.getElementById('ab_bar_all');
+						var myChart10 = echarts.init(chartDom10);
+						var option10;
+						
+						option10 = {
+						  title: {
+						    subtext: '累计确诊人数超千万'
+						  },
+						  tooltip: {
+						    trigger: 'axis',
+						    axisPointer: {
+						      type: 'shadow'
+						    }
+						  },
+						  legend: {},
+						  grid: {
+						    left: '3%',
+						    right: '4%',
+						    bottom: '3%',
+						    containLabel: true
+						  },
+						  xAxis: {
+						    type: 'value',
+						    boundaryGap: [0, 0.01]
+						  },
+						  yAxis: {
+						    type: 'category',
+						    data: ['越南', '西班牙', '土耳其', '意大利', '韩国', '俄罗斯','英国', '德国', '法国', '巴西', '印度', '美国']
+						  },
+						  series: [
+						    {
+						      name: '累计确诊人数',
+						      type: 'bar',
+						      data: [10666751, 11953481, 15038495, 16683043, 17438068, 18211178,22107483, 25203564, 28849915, 30524183, 43094548, 83437158]
+						    },
+						    {
+						      name: '当前确诊人数',
+						      type: 'bar',
+						      data: [1309282, 401907, 3865, 1165541, 17414910, 255959,502704, 2066500, 1277002, 251122, 22874, 1541128]
+						    }
+						  ]
+						};
+						
+						option10 && myChart10.setOption(option10);
+					</script>
+				</div>
+
+			</div>
+
+		</div>
+		
+
+		
+		
+		<div class="clear"> </div>
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>		
+		
+	</body>
+</html>

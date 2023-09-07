@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-人物页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/sty_ce.css" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.css'>
+		<link rel="stylesheet" href="./style.css">
+		<link href="css/ce_in_flow.css" rel="stylesheet" type="text/css" media="all" />
+
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+				cursor: pointer;
+				position: fixed;
+				right: 25px;
+				bottom: 25px;
+				z-index: 99999;
+				display: block;
+				width: 50px;
+				height: 50px;
+				background: url(images/backtop.png) no-repeat 0 0;
+				opacity: 0.5;
+				filter: alpha(opacity=50);
+
+				/*动画效果*/
+				outline: none;
+				transition: all 0.30s ease-in-out;
+				-webkit-transition: all 0.30s ease-in-out;
+				-moz-transition: all 0.30s ease-in-out;
+				-o-transition: all 0.30s ease-in-out;
+				-ms-transition: all 0.30s ease-in-out;
+			}
+
+			.gotop:hover {
+				background: url(images/backtop.png) no-repeat 0 -52px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 100) {
+					$("#gotop").fadeIn()
+				} else {
+					$("#gotop").fadeOut()
+				}
+			});
+			$("#gotop").click(function() {
+				$('html,body').animate({
+					'scrollTop': 0
+				}, 500)
+			});
+		</script>
+
+		<!---顶图：logo+介绍--->
+		<div class=header>
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png" < title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction'>
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>
+		</div>
+		<div class="clear"> </div>
+
+
+
+		<!-- show -->
+
+		<div class="c-s">
+			<div class="blog-slider">
+				<div class="blog-slider_wrp swiper-wrapper">
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-1.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">17年前决战非典，38小时未合眼，83岁又赴武汉</span>
+							<div class="blog-slider_title">钟南山“不怕死”</div>
+							<div class="blog-slider_text">“现在已经存在人传人，同时医务人员也有传染，大家要提高警惕了，没有特殊情况不要去武汉。”
+								对新型冠状病毒作出这番结论后，强调“不要去武汉”的钟南山院士却毅然奔赴疫情最前线，不畏艰苦，义无反顾……
+							</div>
+							<a href="https://view.inews.qq.com/a/20220417A090M900?startextras=0_0ebe7c50c6332&from=ampzkqw"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-2.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">全球首支奥密克戎灭活疫苗临床第一剂接种完成！</span>
+							<div class="blog-slider_title">李兰娟这样说</div>
+							<div class="blog-slider_text">
+								“奥密克戎变异株疫苗的研发非常重要，当然原来的疫苗还是有效的，但是针对变异株的疫苗研发以后，将可能会有更好的免疫效果。这个也证明了中国在抗疫工作当中的速度、中国的效率。”
+								中国工程院院士李兰娟表示，相信通过严格的临床研究……</div>
+							<a href="http://news.cnr.cn/native/gd/20220502/t20220502_525813964.shtml"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-3.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">仍忙碌在工作一线</span>
+							<div class="blog-slider_title">人民英雄”张定宇</div>
+							<div class="blog-slider_text">
+								去年，湖北省卫生健康委副主任张定宇被授予“人民英雄”国家荣誉称号。一年来，身患渐冻症的张定宇，仍然忙碌在工作一线，为维护人民健康作出新的贡献。……</div>
+							<a href="http://m.news.cctv.com/2021/09/08/ARTIdE6mIiXovWyKZWextNXR210908.shtml"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-4.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">爱读金庸、不按套路出牌</span>
+							<div class="blog-slider_title">耿直医生张文宏</div>
+							<div class="blog-slider_text"> 似乎一夜之间，复旦大学附属华山医院感染科主任张文宏“火”了。
+
+								火到什么程度？他在华山医院感染科公众号的微信号上发一篇文章，在微博上的转发阅读量近十个亿！
+
+								甚至有网友直言：“关于疫情，我只听两个人的话。一个是钟南山，另一个是张文宏。”……</div>
+							<a href="http://sh.people.com.cn/n2/2020/0326/c134768-33904329.html"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-5.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">我对自己一年前的表现十分满意</span>
+							<div class="blog-slider_title">疫情上报第一人”张继先</div>
+							<div class="blog-slider_text">
+								2019年12月27日，湖北省中西医结合医院呼吸内科主任张继先在接诊一对老人的过程中“抽丝剥茧”，敏锐地洞察出传染病发生的迹象并及时上报。一年后的今天，在传染力超强的新冠肺炎疫情席卷全球的大背景之下……
+							</div>
+							<a href="http://t.ynet.cn/baijia/30130931.html" class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-6.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">我们该如何纪念他</span>
+							<div class="blog-slider_title">李文亮逝世两周年</div>
+							<div class="blog-slider_text">
+								2020年2月7日凌晨2点58分，武汉市中心医院眼科医生李文亮不幸离开了人世。如今，一晃两年时间已经过去，但那举国同悲，满屏都是李文亮的夜晚，依然让人历历在目，感念不已。李文亮医生之所以为无数人怀念……
+							</div>
+							<a href="https://baijiahao.baidu.com/s?id=1724069898000742256&wfr=spider&for=pc"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-7.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">捐出20万积蓄 是她卖针线30年攒下的“分分钱”</span>
+							<div class="blog-slider_title">重庆87岁老人倪素英</div>
+							<div class="blog-slider_text">她是一个摆摊的老人,多年摆摊卖针线纽扣,挣的是“分分钱”;
+
+								她也是一个节俭的老人,曾经为了节省一两元车费钱,走路出摊;
+
+								但这次,她是一个感动我们的老人,捐出了自己30年的积蓄20万元,只为帮助国家战胜疫情,渡过难关……</div>
+							<a href="https://baijiahao.baidu.com/s?id=1658213405155770008&wfr=spider&for=pc"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-8.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">300公里骑行返岗——“人民至上、生命至上”理念生动彰显</span>
+							<div class="blog-slider_title">“白衣天使”甘如意</div>
+							<div class="blog-slider_text">两年前，武汉封城之时，荆州女孩甘如意历经四天三夜艰难骑行返岗，回到江夏区金口中心卫生院检验科，投身战疫一线。
+
+								她的身影，成为疫情阻击战中，广大医护人员向险而行、不怕牺牲……</div>
+							<a href="https://baijiahao.baidu.com/s?id=1726622819578046065&wfr=spider&for=pc"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+					<div class="blog-slider_item swiper-slide">
+						<div class="blog-slider_img">
+							<img src="images/c-s-9.jpg" alt="">
+						</div>
+						<div class="blog-slider_content">
+							<span class="blog-slider_code">与毒共舞的女将军，被无数学子引为榜样</span>
+							<div class="blog-slider_title">生化武器防御专家 陈薇</div>
+							<div class="blog-slider_text">“1991年4月，我清晰地记得，一个春雨绵绵的早晨，一辆军车把我从清华园载到军事医学科学院，开始了我携笔从戎的军旅生涯。”
+
+								2012年的夏天，清华大学为即将毕业的学子请来了他们的学姐，1991届硕士毕业生陈薇，做了一场毕业典礼上的讲话……</div>
+							<a href="https://baijiahao.baidu.com/s?id=1725735602402819018&wfr=spider&for=pc"
+								class="blog-slider_button">阅读更多……</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="blog-slider_pagination"></div>
+			</div>
+
+		</div>
+		<!-- partial -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.15/swiper-bundle.min.js'></script>
+		<script src="js/script.js"></script>
+		<div class="clear"> </div>
+
+		<!---typical charactor--->
+		<div class="c-t">
+			<div class="c-t-title">
+				<h1>----- 人 物 卡 片 -----</h1>
+			</div>
+			<div class="card">
+				<div class="photo">
+					<img src="images/c-s-1.jpg">
+				</div>
+				<h1>钟南山</h1>
+				<h2>男，江苏南京人</h2>
+				<p>呼吸内科专家，中国科学院院士,中国抗击非典型肺炎、新冠肺炎疫情的领军人物.</p>
+				<a href="#">了解更多</a>
+			</div>
+			<div class="card">
+				<div class="photo">
+					<img src="images/c-s-2.jpg">
+				</div>
+				<h1>李兰娟</h1>
+				<h2>女，浙江绍兴人</h2>
+				<p>感染病（传染病）学家，中国工程院院士，国家健康科普专家库第一批成员，中国人工肝开拓者</p>
+				<a href="#">了解更多</a>
+			</div>
+			<div class="card">
+				<div class="photo">
+					<img src="images/c-s-3.jpg">
+				</div>
+				<h1>张定宇</h1>
+				<h2>男，张定宇</h2>
+				<p>现任湖北省卫生健康委员会副主任、武汉金银潭医院院长，2020年被授予“人民英雄”国家荣誉称号</p>
+				<a href="#">了解更多</a>
+			</div>
+		</div>
+		<div class="clear"> </div>
+		<!---zone--->
+		<div class="zone">
+
+			<!-- 搜索区 -->
+			<div class="c-s_zone">
+				<div class="wrapper">
+					<input type="text" class="input" placeholder='在这里查询你想要的人物信息及相关报道……'>
+					<div class="searchbtn" background:url('../images/search.png');>
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="ce_in_flow">
+				<div class="blog-posts">
+					<div class="post">
+						<img src="images/c-s-1.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>钟南山</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+					<div class="post">
+						<img src="images/c-s-2.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>李兰娟</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+					<div class="post">
+						<img src="images/c-s-3.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>张定宇</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+					
+					<div class="post">
+						<img src="images/c-s-4.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>张文宏</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+					<div class="post">
+						<img src="images/c-s-5.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>张继先</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+					<div class="post">
+						<img src="images/c-s-6.jpg" alt="" class="post-img">
+						<div class="post-content">
+							<h3>李文亮</h3>
+							<span class="date">————--- 了 解 更 多 ---————</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="clear"> </div>
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。
+					</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#"
+					target="_blank" title="">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+	</body>
+</html>

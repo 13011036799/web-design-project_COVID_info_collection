@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-知识页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_kn.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_se.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_news.css" rel="stylesheet" type="text/css"  media="all" />
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>
+		<div class="clear"> </div>
+
+
+		<!-- banner -->
+		<div class="restriction">
+			<div class="k-b-container">
+				<div class="box">				
+					<div class="item" >
+						<!-- 默认第一个选中 -->
+						<input type="radio" name="btn" id="btn1" checked>
+						<label for="btn1" style="--i:1"></label>
+						<div class="img" >
+							<img src="images/kb1.jpg" >
+							<div class="right"> 
+								<a href="knowledge-page-know2/search.html" >新冠病毒<br/></a>
+								<div class="k-b-intro">
+									<a href="knowledge-page-know2/search.html">知识大科普 这些基本知识你知道吗</a> 
+								</div>
+						</div>				
+					</div>			
+					<div class="item">
+						<input type="radio" name="btn" id="btn2">
+						<label for="btn2" style="--i:2"></label>
+						<div class="img">
+							<img src="images/kb2.jpg" alt="">
+							<div class="right"> 
+								<a href="know1.html" >疫情防护<br/></a>
+								<div class="k-b-intro">
+									<a href="know1.html">小知识：如何正确洗手？</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn3">
+						<label for="btn3" style="--i:3"></label>
+						<div class="img">
+							<img src="images/kb3.jpg" alt="">
+							<div class="right">
+								<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">核酸检测<br/></a>
+								<div class="k-b-intro">
+									<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">这些注意事项一定要知道！ </a> 
+								</div>
+							</div>							
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn4">
+						<label for="btn4" style="--i:4"></label>
+						<div class="img">
+							<img src="images/kb4.jpg" alt="">
+							<div class="right">
+								<a href="https://new.qq.com/omn/20220419/20220419A0D06900.html" >【防疫知识】<br/></a>
+								<div class="k-b-intro">
+									<a href="https://new.qq.com/omn/20220419/20220419A0D06900.html">请收藏 疫情防控宣传小知识</a> 
+								</div>																
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn5">
+						<label for="btn5" style="--i:5"></label>
+						<div class="img">
+							<img src="images/kb5.jpg" alt="">
+							<div class="right">
+								<a href="https://baijiahao.baidu.com/s?id=1728377478610067500&wfr=spider&for=pc" >定期复诊<br/></a>
+								<div class="k-b-intro">
+									<a href="https://baijiahao.baidu.com/s?id=1728377478610067500&wfr=spider&for=pc">新冠肺炎患者出院后应该注意什么？</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn6">
+						<label for="btn6" style="--i:6"></label>
+						<div class="img">
+							<img src="images/kb6.jpg" alt="">
+							<div class="right">
+								<a href="https://baijiahao.baidu.com/s?id=1707443515325731557&wfr=spider&for=pc" >重要提醒！<br/></a>
+								<div class="k-b-intro">
+									<a href="https://baijiahao.baidu.com/s?id=1707443515325731557&wfr=spider&for=pc">疫情期间怎样安全取快递？</a> 
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>	
+
+
+		
+		
+		
+		
+		
+		
+		
+		<div class="clear"> </div>
+		<!---hot knowledge area--->
+		<div class="hot-t">
+			<h1>
+				-----热 门 知 识 区-----
+			</h1>
+		</div>
+		
+		<div class="hot-k">
+			<div class="h-k-content1">
+				<div class="title">
+					<h2>防疫小知识</h2>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">1</span>
+					<span class="p"><a href="https://www.thepaper.cn/newsDetail_forward_17625994">【防疫小贴士】防疫小知识，你我需牢记 </a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">2</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730543648654247006&wfr=spider&for=pc">防疫常识天天见｜12张图让你秒懂<br/>"平安韶关"韶关市公安局</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">3</span>
+					<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">【防疫科普】疫情防控宣传知识<br/>【防疫科普】疫情防控宣传知识</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">4</span>
+					<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752">防疫知识丨防疫知识及预防措施<br/>政务：果洛公安---基础防护篇</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">5</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730521709391847192&wfr=spider&for=pc">市民新冠防疫知识手册”电子书上线<br/>科普电子书《市民新冠防疫知识手册》</a></span>
+				</div>
+			</div>
+			
+		</div>
+			
+		<div class="hot-k">
+			<div class="h-k-content1">
+				<div class="title">
+					<h2>核酸要注意</h2>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">1</span>
+					<span class="p"><a href="https://m.thepaper.cn/baijiahao_16924660">核酸检测注意事项 <br/>政务：山西晋中交警 2022-03-02</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">2</span>
+					<span class="p"><a href="http://www.mca.gov.cn/article/xw/mtbd/202204/20220400041325.shtml">做核酸检测 这些注意事项要知道！<br/>“健康中国”微信公众号</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">3</span>
+					<span class="p"><a href="http://news.cnhubei.com/content/2022-04/19/content_14673786.html">居民进行核酸检测有哪些注意事项？省疾控中心专家进行了详细解读</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">4</span>
+					<span class="p"><a href="https://www.thepaper.cn/newsDetail_forward_17694669">你今天做核酸检测了吗？这些注意事项要知道！【新型冠状病毒科普知识】</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">5</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1724938610990757824&wfr=spider&for=pc">最新核酸检测注意事项来了！<br/>潇湘晨报官方百家号</a></span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="hot-k">
+			<div class="h-k-content1">
+				<div class="title">
+					<h2>新冠患者须知</h2>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">1</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1728377478610067500&wfr=spider&for=pc">新冠肺炎患者出院后应该注意什么？除了定期复诊，还有这些！ </a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">2</span>
+					<span class="p"><a href="https://m.thepaper.cn/baijiahao_17346886">新冠肺炎患者出院后居家健康监测注意事项</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">3</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1729449272876028209&wfr=spider&for=pc">新冠肺炎患者出院后居家监测应注意哪些问题</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">4</span>
+					<span class="p"><a href="http://news.sohu.com/a/535087591_121124216">【众志成城 共同抗疫】| 健康科普 《 新冠肺炎的十大症状》</a></span>
+				</div>
+				<div class="h-k-panel1" >
+					<span class="t">5</span>
+					<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730515783251464336&wfr=spider&for=pc">新冠轻度患者也有“后遗症”吗？调查万余人：这4种症状很常见</a></span>
+				</div>
+			</div>
+			
+		</div>
+		<div class="clear"></div>
+
+		<!---classification--->
+		<div class="add_back">
+			<div class="container">
+					<nav class="menu">
+						<ul>
+							<li> 
+								<a href="#">新冠预防</a> 
+								<ul class="sub">
+									<li> <a href="#">防护用具</a></li>
+									<li> <a href="#">行为规范</a></li>
+								</ul>
+							</li>
+							<li> 
+								<a href="#">核酸检测</a>
+								<ul class="sub">
+									<li> <a href="#">检测流程</a></li>
+									<li> <a href="#">检测原理</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">患者治疗</a>
+								<ul class="sub">
+									<li> <a href="#">患病症状</a></li>
+									<li> <a href="#">轻症治疗</a></li>
+									<li> <a href="#">重症治疗</a></li>
+								</ul>
+							</li>
+							<li> 
+								<a href="#">消毒方法</a> 
+								<ul class="sub">
+									<li> <a href="#">消毒用品</a></li>
+									<li> <a href="#">注意事项</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">隔离方法</a>
+								<ul class="sub">
+									<li> <a href="#">居家隔离</a></li>
+									<li> <a href="#">方舱隔离</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				
+			<!---search box--->
+			<div class="search-box">
+				<input class="search-txt" type="text" placeholder="请查询相关新闻……" />
+				<a class="search-btn" href="#">
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+		</div>					
+		
+		<!---content--->
+		<div class="k-con">
+			<div class="k-content">
+				<div class="k-content1">
+					<a href="know1.html">
+						<img src="images/index-know1.png" class="img-responsive" alt="">
+						<h4>疫情防护小知识：如何正确洗手？</h4>
+						<p>1.在流动水下淋湿双手；2.取适量洗手液（肥皂）均匀涂抹至整个手掌；3.认真搓双手至少15秒，具体操作如下：a.掌心相对，手指并拢，相互揉搓；b.手心对手背沿指缝揉搓，交换进行……</p>
+					</a>
+				</div>
+				<div class="k-content2">
+					<a href="https://m.thepaper.cn/baijiahao_17578118">
+						<img src="images/index-know2.jpg" class="img-responsive" alt="">
+						<h4>去做核酸检测时，这些注意事项一定要知道！</h4>
+						<p>参加大规模核酸检测，需要注意什么？核酸检测前建议两小时内最好不吃东西，提前30分钟不喝水、不饮酒、不吃口香糖，避免采样过程中可能出现的呕吐、反胃等表现；戴好口罩，做好个人防护，保持社交距离……</p>
+					</a>
+				</div>
+				<div class="k-content3">
+					<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">
+						<img src="images/index-know3.jpg" class="img-responsive" alt="">
+						<h4>【防疫知识】请收藏 疫情防控宣传小知识</h4>
+						<p>面对新型冠状病毒，我们不要恐慌，要做好自身防护，以下是一些关于新型冠状病毒的防范知识。个人防疫知识！1、勤洗手。使用肥皂或洗手液并用流动水洗手，用一次性纸巾或干净毛巾擦手。双手接触呼吸道分泌物后（如打喷嚏后）应立即洗手……</p>
+					</a>
+				</div>
+				<div class="k-content4">
+					<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">
+						<img src="images/index-know4.jpg" class="img-responsive" alt="">
+						<h4>疫情期间怎样安全取快递？重要提醒！</h4>
+						<p>疫情期间，新冠病毒存在通过物体表面存活的风险，快递包裹通过货运长途运输极大可能从国内中高风险地区携带病毒，造成物传人风险。在这特殊时期，如何安全接收快递包裹降低感染风险？无论是快递从业人员还是普通公众在收发快递时都应提高警惕，做好防护……</p>
+					</a>
+				</div>
+				<div class="k-content5">
+					<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">
+						<img src="images/index-know5.jpg" class="img-responsive" alt="">
+						<h4>新冠肺炎患者出院后应该注意什么？</h4>
+						<p>除了定期复诊，还有这些！1.注意休息、饮食要均衡，刚刚出院，身体完全康复还需要一段时间。2.继续进行14天自我健康状况监测。这是因为在恢复期机体免疫功能低下，有感染其他病原体风险，所以应继续注意每日体温监测，在家还是要佩戴口罩，有条……</p>
+					</a>
+				</div>
+				<div class="k-content6">
+					<a href="knowledge-page-know2/search.html">
+						<img src="images/index-know6.jpg" class="img-responsive" alt="">
+						<h4>新冠病毒知识大科普 这些基本知识你知道吗</h4>
+						<p>冠状病毒是一个大型病毒家族，已知可引起感冒及中东呼吸综合征和严重急性呼吸综合征等较严重疾病。新型冠状病毒是以前从未在人体中发现的冠状病毒新毒株。新型冠状病毒感染的患者的临床表现为：以发热、乏力、干咳为主要表现，鼻塞、流涕……</p>
+					</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>			
+		<!---commodity--->
+
+		
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-交流区</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_com.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_com.css" rel="stylesheet" type="text/css"  media="all" />
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>
+		
+		<!---main--->
+		<div class="main">
+			<div class="content">
+				<div class="content_resize">
+					<div class="mainbar">
+						<div class="article">
+							<h2>上海累计死亡病例190例</h2>
+							<p>2022/4/26</p>
+							<p>26日，上海疫情防控发布会上，上海市卫健委副主任赵丹丹介绍，截至4月25日，上海累计死亡病例190例，最小33岁，最大101岁，平均年龄82.52岁。据统计，70岁以上死亡病例占总数的86.32%。除1例心源性猝死之外，其余死亡原因均为基础性疾病。死亡病例中12例曾接种过新冠肺炎病毒疫苗，其余均未接种新冠疫苗。</p>
+							<img src="images/com-1.png" width="263" height="146" alt="image" />
+						</div>
+						<div class="article">
+							<h2>苏州菜农捐10万斤莴苣给抗疫一线</h2><div class="clr"></div>
+							<p>2022/4/26</p>
+							<p>来自山东临沂的刘长江，在苏州太仓璜泾镇种植蔬菜。为了感谢坚守在一线的抗疫人员，他决定捐赠莴苣。得知他的心愿，村民和志愿者们帮忙采收、运送，相关部门配合做好对接的等工作。目前，已有16吨莴苣陆续送往医院、消防救援大队等单位。 </p>
+							<img src="images/com-2.png" width="263" height="146" alt="image" />
+						</div>
+						<div class="article">
+						  <h2>北京将严查借防疫之机囤积居奇</h2>
+						  <div class="clr"></div>
+						  <p>2022/4/26</p>
+						  <p>北京消协公众号4月26日消息，北京市市场监管局日前发布《规范市场价格行为提醒告诫书》。北京青年报记者了解到，告诫书表示，近期本市新冠肺炎疫情多点散发，疫情防控形势依然严峻。为规范市场价格行为，保障蔬菜等生活必需品及防疫用品价格稳定，维护消费者合法权益和良好价格秩序，提醒本市各经营者及相关单位，加强价格管控，稳定价格水平。&nbsp; </p>
+							<p>告诫书提醒本市各经营者及相关单位，认真落实明码标价制度，切实做到价签价目齐全、标价内容真实明确、字迹清晰、货签对位、标示醒目。不得在标价之外加价出售商品，不得收取任何未予标明的费用。&nbsp; </p>
+							<p>经营者开展促销活动时，不得利用虚构原价、虚假优惠折价、不履行价格承诺等虚假的或者使人误解的价格手段，诱骗消费者或者其他经营者与其进行交易。不得捏造、散布涨价信息，哄抬价格，推动商品价格过高、过快上涨，扰乱市场价格秩序。除生产自用外，不得超出正常的存储数量或者存储周期，大量囤积市场供应紧张、价格发生异常波动的商品。不得相互串通，操纵市场价格，损害其他经营者或者消费者的合法权益。不得有排除、限制竞争的价格垄断行为。&nbsp; </p>
+							<p>此外，告诫书还提出，经营者应当加强价格自律，强化依法经营、诚实守信意识。建立和完善内部价格管理机制和纠错机制，及时妥善处理价格纠纷。行业协会或其他单位不得组织经营者串通涨价，操纵市场价格。要积极引导经营者合法经营，共同维护市场价格秩序。&nbsp; </p>
+							<p>北京市市场监管部门将持续加强价格执法检查力度，严肃查处借疫情防疫之机囤积居奇、捏造散布涨价信息、哄抬价格等扰乱市场价格秩序的价格违法行为。欢迎广大市民积极拨打12345进行投诉举报，一经查实，市场监管部门将依法严肃处理，对情节恶劣的典型案件，将公开曝光。</p>
+						</div>
+					</div>
+					<div class="sidebar">
+						<div class="searchform">
+							<form id="formsearch" name="formsearch" method="post" action="">
+								<span><input name="editbox_search" class="editbox_search"  placeholder="搜索" type="text" />
+								<img name="button_search" src="images/search.jpg" width="38px" class="button_search" type="image"/>
+								</span>
+								
+							</form>
+						</div>
+						<div class="gadget">
+							<h2>标签云</h2><div class="clr"></div>
+							<ul class="tag">
+								<li><a href="#"># 北京疫情 #</a></li>
+								<li><a href="#"># 上海疫情 #</a></li>
+								<li><a href="#"># 新冠病毒变异 #</a></li>
+								<li><a href="#"># 北京有必要开始囤货吗 #</a></li>
+								<li><a href="#"># 居家隔离必备物品 #</a></li>
+							</ul>
+						</div>
+						<div class="gadget">
+							<h2><span>热门推荐</span></h2><div class="clr"></div>
+							<ul class="populor">
+								<li><a href="#" title="Website Templates">五一假期能否安心出游?</a><br /><p>五一假期将近，这个假期能否安心出游？不少朋友非常关心.近日，四川省文化和旅......</p></li>
+								<li><a href="#" title="Affordable Hosting">上海累计死亡病例190例</a><br /><p>截至4月25日，上海累计死亡病例190例，最小33岁，最大101岁，平均年龄82......</p></li>
+								<li><a href="#" title="Affordable Hosting">国药集团奥密克戎变异株新冠疫苗获临床批件</a><br /><p>国药集团中国生物奥密克戎变异株新冠病毒灭活疫苗获国家药监局临床批件。中国......</p></li>
+								<li><a href="#" title="Affordable Hosting">防疫期间储存食物消费提示</a><br /><p>居家抗“疫”期间，做饭成了必备技能。但是食材的选购和储存可是有要求的。什么......</p></li>
+								<li><a href="#" title="Affordable Hosting">北京将严查借防疫之机囤积居奇</a><br /><p>告诫书表示，近期北京市新冠肺炎疫情多点散发，疫情防控形势依然严峻。为规范......</p></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>
+	<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>联系方式：1178783922@qq.com</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="力到家旗舰店">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+	</body>
+</html>

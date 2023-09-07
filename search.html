@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-学术研究页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		
+		<link href="css/sty_news.css" rel="stylesheet" type="text/css"  media="all" />
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+		<link href="css/sty_se.css" rel="stylesheet" type="text/css"  media="all" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>	
+
+		<!---banner--->
+		<div class="restriction">
+			<div class="n-b-container">
+				<div class="box">				
+					<div class="item" >
+						<!-- 默认第一个选中 -->
+						<input type="radio" name="btn" id="btn1" checked>
+						<label for="btn1" style="--i:1"></label>
+						<div class="img" >
+							<img src="images/s-b-1.jpg" >
+							<div class="right"> 
+								<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/grc-754185" >SARS-CoV-2<br/></a>
+								<div class="k-b-intro">
+									<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/grc-754185">What is the seroprevalence of SARS-CoV-2</a> 
+								</div>
+						</div>				
+					</div>			
+					<div class="item">
+						<input type="radio" name="btn" id="btn2">
+						<label for="btn2" style="--i:2"></label>
+						<div class="img">
+							<img src="images/s-b-2.jpg" alt="">
+							<div class="right"> 
+								<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0107" >卫生政策分析<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0107">基层医疗卫生机构在新型冠状病毒肺炎疫情防控中的作用研究</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn3">
+						<label for="btn3" style="--i:3"></label>
+						<div class="img">
+							<img src="images/s-b-3.jpg" alt="">
+							<div class="right">
+								<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0051">"全科医学+"<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0051">医共体模式下新型冠状病毒肺炎疫情社区网格化防控专家建议 </a> 
+								</div>
+							</div>							
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn4">
+						<label for="btn4" style="--i:4"></label>
+						<div class="img">
+							<img src="images/s-b-4.jpg" alt="">
+							<div class="right">
+								<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0098" >基层医疗机构<br/></a>
+								<div class="k-b-intro">
+									<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0098">城中村新型冠状病毒肺炎疫情发生特点及其基层医疗卫生机构的防控策略分析研究</a> 
+								</div>																
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn5">
+						<label for="btn5" style="--i:5"></label>
+						<div class="img">
+							<img src="images/s-b-5.jpg" alt="">
+							<div class="right">
+								<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800404" >Nirmatrelvir<br/></a>
+								<div class="k-b-intro">
+									<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800404">combined with ritonavir for preventing and treating COVID-19</a> 
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<input type="radio" name="btn" id="btn6">
+						<label for="btn6" style="--i:6"></label>
+						<div class="img">
+							<img src="images/s-b-6.jpg" alt="">
+							<div class="right">
+								<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800407" >Mortality<br/></a>
+								<div class="k-b-intro">
+									<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800407">Undergoing Chemotherapy or Immunotherapy and Infected With COVID-19 </a> 
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		
+		<!---search--->
+		<!-- 搜索区 -->
+		<div class="n-s">
+			<div class="wrapper">
+					<input type="text" class="input" placeholder='请在这里查询你想要的研究文献……?'>
+					<div class="searchbtn" background:url('../images/search.png');>
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+		</div>
+		<div class="clear"></div>
+		<!---classification--->
+		<div class="se-cl">
+			<div class="s-cla">
+				<div class="s-cla-content1">
+					<div class="title">
+						<h2>文献来源选择器</h2>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">1</span>
+						<span class="p"><a href="https://scihub.wikicn.top/">sci-hub：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://scihub.wikicn.top/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">2</span>
+						<span class="p"><a href="https://scholar.chongbuluo.com/">谷歌学术：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://scholar.chongbuluo.com/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">3</span>
+						<span class="p"><a href="https://scholar.chongbuluo.com/">百度学术：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://scholar.chongbuluo.com/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">4</span>
+						<span class="p"><a href="https://scholar.chongbuluo.com/">PMC：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://scholar.chongbuluo.com/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">5</span>
+						<span class="p"><a href="http://www.cnki.net/">中国知网：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.cnki.net/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">6</span>
+						<span class="p"><a href="http://www.wanfangdata.com.cn/index.html">万方数据库：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.wanfangdata.com.cn/</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">7</span>
+						<span class="p"><a href="https://scholar.chongbuluo.com/">IData：<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://search.cn-ki.net/advance_search</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="s-cla">
+				<div class="s-cla-content1">
+					<div class="title">
+						<h2>研究主题</h2>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">1</span>
+						<span class="p"><a href="https://www.thepaper.cn/newsDetail_forward_17625994">疫情防控(2.09万)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">2</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730543648654247006&wfr=spider&for=pc">疫情分析(3225)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">3</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">新型冠状病毒肺炎(2966)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">4</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752">突发公共卫生事件(2466)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">5</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730521709391847192&wfr=spider&for=pc">流行病学(2283)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">6</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">后疫情时期(1858)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">7</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752">后疫情时期(1858)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">8</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730521709391847192&wfr=spider&for=pc">社区治理(1570)</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="s-cla">
+				<div class="s-cla-content1">
+					<div class="title">
+						<h2>作者</h2>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">1</span>
+						<span class="p"><a href="https://www.thepaper.cn/newsDetail_forward_17625994">周瑞(5) </a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">2</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730543648654247006&wfr=spider&for=pc">姚能亮(8)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">3</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">陈芳芳(4)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">4</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752">Varnai, C.(6)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">5</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730521709391847192&wfr=spider&for=pc">Palles, C.(9)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">6</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">康良钰(11)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">7</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752"> 商伟静(25)</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">8</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730521709391847192&wfr=spider&for=pc">刘民(9)</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="s-cla">
+				<div class="s-cla-content1">
+					<div class="title">
+						<h2>发表时间</h2>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">1</span>
+						<span class="p"><a href="https://www.thepaper.cn/newsDetail_forward_17625994">2019（3928）</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">2</span>
+						<span class="p"><a href="https://baijiahao.baidu.com/s?id=1730543648654247006&wfr=spider&for=pc">2020（11.17万）</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">3</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_16847808">2021（5.45万）</a></span>
+					</div>
+					<div class="s-cla-panel1" >
+						<span class="t">4</span>
+						<span class="p"><a href="https://m.thepaper.cn/baijiahao_17651752">2022（1.48万）</a></span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- article -->
+		<div class="se-ar">
+			<div class="se-ar-sp">
+				<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/grc-754185">
+					<div class="list-num">
+						<h1>1</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							What is the seroprevalence of SARS-CoV-2 in Canada during the COVID-19 pandemic? 
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							Waterloo, University of.  
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							Non-conventional | NCCMT Repository, GREY-COVIDWHO | ID: grc-754185
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="se-ar-sp">
+				<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0107">
+					<div class="list-num">
+						<h1>2</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							基于卫生政策分析的基层医疗卫生机构在新型冠状病毒肺炎疫情防控中的作用研究  
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							周瑞, 姚能亮, 陈芳芳  
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							 收稿日期:2022-02-14 修回日期:2022-03-06 出版日期:2022-04-05 发布日期:2022-03-28<br/>				
+							  基金资助:
+							  国家社科基金应急管理体系建设研究专项项目(20VYJ057)
+
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="se-ar-sp">
+				<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800407">
+					<div class="list-num">
+						<h1>3</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							Mortality Among Adults With Cancer Undergoing Chemotherapy or Immunotherapy and Infected With COVID-19 (vol 5, e220130, 2022)   
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							Varnai, C.; Palles, C.; Arnold, R..   
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							Article in English | Web of Science | ID: covidwho-1800407
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="se-ar-sp">
+				<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0051">
+					<div class="list-num">
+						<h1>4</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							"全科医学+"医共体模式下新型冠状病毒肺炎疫情社区网格化防控专家建议 
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+								杜庆锋,吴浩,祝墡珠 
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							 收稿日期:2022-01-24 修回日期:2022-03-02 出版日期:2022-04-05 发布日期:2022-03-28 <br/>基金资助:
+国家重点研发计划资助项目(2020YFC2006400);2019年广东省研究生教育创新计划项目(2019JGXM21);佛山市科技创新项目(2020001000376-03，2020001005585-01)
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="se-ar-sp">
+				<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800404">
+					<div class="list-num">
+						<h1>5</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							
+Nirmatrelvir combined with ritonavir for preventing and treating COVID-19 
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							Reis, S.; Popp, M.; Kuehn, R.; Metzendorf, M. I.; Gagyor, I.; Kranke, P.; Meybohm, P.; Skoetz, N.; Weibel, S.. 
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							Article in English | EMBASE | ID: covidwho-1800404
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			
+			<div class="se-ar-sp">
+				<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0091">
+					<div class="list-num">
+						<h1>6</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							新型冠状病毒肺炎疫情下北京市社区慢性病患者医疗服务保障政策研究  
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							康良钰, 商伟静, 刘珏, 刘民  
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							
+							    收稿日期:2022-01-16 修回日期:2022-02-23 出版日期:2022-03-28 发布日期:2022-03-28<br/>
+							    基金资助:
+							    首都卫生发展科研专项(2021-1G-4281)
+
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="se-ar-sp">
+				<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800380">
+					<div class="list-num">
+						<h1>7</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							
+Chronic cerebral aspects of long COVID, post-stroke syndromes and similar states share their pathogenesis and perispinal etanercept treatment logic (vol 10, e00926, 2022) 
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							Clark. 
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							Article in English | Web of Science | ID: covidwho-1800380
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="se-ar-sp">
+				<a href="https://www.chinagp.net/CN/10.12114/j.issn.1007-9572.2022.0098">
+					<div class="list-num">
+						<h1>8</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							城中村新型冠状病毒肺炎疫情发生特点及其基层医疗卫生机构的防控策略分析研究  
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							张冬莹, 姚弥, 刘曼玲, 郭发刚, 吴江, 王宝记, 肖宝军, 徐静, 赖艳梅, 郑劲平    
+							</h5>
+						</div>
+						<div class="ar-intro">
+							<p>
+							
+							    收稿日期:2022-01-26 修回日期:2022-02-21 出版日期:2022-04-15 发布日期:2022-03-28
+							    <br/>
+							    基金资助:
+							    国家重点研发计划(2021YFF0604000)
+
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="se-ar-sp">
+				<a href="https://search.bvsalud.org/global-literature-on-novel-coronavirus-2019-ncov/resource/en/covidwho-1800338">
+					<div class="list-num">
+						<h1>9</h1>
+					</div>
+					<div class="ar-con">
+						<div class="ar-title">
+							<h3>
+							
+A historical overview of advances in molecular genetic/genomic studies of the ABO blood group system. 
+							</h3>
+						</div>
+						<div class="ar-from">
+							<h5>
+							Yamamoto, Fumiichiro. 
+						</div>
+						<div class="ar-intro">
+							<p>
+							Article in English | MEDLINE | ID: covidwho-1800338
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="力到家旗舰店">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+	</body>
+</html>

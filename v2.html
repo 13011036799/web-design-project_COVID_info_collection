@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-可视化页</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href="css/sty_vi2.css" rel="stylesheet" type="text/css"  media="all" />
+		<!-- <link href="css/styl_vi.css" rel="stylesheet" type="text/css"  media="all" /> -->
+		<link rel="stylesheet" href="css/iconfont.css">
+		<script src="js/jquery.min.js"></script>
+		<style>
+			.gotop {
+			    cursor: pointer;
+			    position: fixed;
+			    right: 25px;
+			    bottom: 25px;
+			    z-index: 99999;
+			    display: block;
+			    width: 50px;
+			    height: 50px;
+			    background: url(images/backtop.png) no-repeat 0 0;
+			    opacity: 0.5;
+			    filter: alpha(opacity=50);
+			 
+			    /*动画效果*/
+			    outline: none;
+			    transition: all 0.30s ease-in-out;
+			    -webkit-transition: all 0.30s ease-in-out;
+			    -moz-transition: all 0.30s ease-in-out;
+			    -o-transition: all 0.30s ease-in-out;
+			    -ms-transition: all 0.30s ease-in-out;
+			}
+			 
+			    .gotop:hover {
+			        background: url(images/backtop.png) no-repeat 0 -52px;
+			    }
+		</style>
+	</head>
+	<body>
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function () {
+			    if ($(window).scrollTop() > 100) {
+			        $("#gotop").fadeIn()
+			    } else {
+			        $("#gotop").fadeOut()
+			    }
+			});
+			$("#gotop").click(function () {
+			    $('html,body').animate({
+			        'scrollTop': 0
+			    }, 500)
+			});
+		</script>
+		<!---顶图：logo+介绍--->
+		<div class=header >
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png"< title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction' >
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>			
+		</div>
+				
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>			
+		</div>
+		
+		<!---back--->
+		<div class="back">
+			<a href="visualization.html">
+					<!-- <img src="images/back.png"/> -->
+					<h3>返 回</h3>
+			</a>
+				
+		</div>
+		<!---visualization--->
+		
+		<div class="wrap3">
+			<div class="box">
+				<div class="left"></div>
+				<div class="center">
+					<span>2020.1.1</span>
+				</div>
+				<div class="right">
+					华南海鲜市场关停;<br/>平安武汉发布消息8名散布“谣言”者被查处
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left" >
+					香港特区政府开会检视针对武汉疫情的预防措施
+				</div>
+				<div class="center">
+					<span>2020.1.2</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.3</span>
+				</div>
+				<div class="right">
+					湖北省新华医院出现3例CT异常;<br/>
+					武汉卫健委通报44例“不明原因病毒性肺炎”;
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					香港特区政府启动“严重”级别应变
+				</div>
+				<div class="center">
+					<span>2020.1.4</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.5</span>
+				</div>
+				<div class="right">
+					武汉同济医院急诊医生陆俊肺部CT异常;<br/>
+					武汉卫健委通报59例“不明原因病毒性肺炎”;<br/>
+				</div>
+			</div>
+						
+			<div class="box">
+				<div class="left" >
+					武汉大学中南医院收治重症肺炎病人;<br/>国家疾控中心启动二级应急响应;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.6</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">					
+				</div>
+				<div class="center">
+					<span>2020.1.7</span>
+				</div>
+				<div class="right">
+					疾控中心专家分离出新型冠状病毒
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					香港将武汉不明肺炎纳入法定监管传染病;<br/>国家卫健委确认新冠病毒为疫情病源;
+				</div>
+				<div class="center">
+					<span>2020.1.8</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.9</span>
+				</div>
+				<div class="right">
+					新冠出现首个死亡病例（当日未通报）;<br/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">完成病源核酸检测;<br/>中国疾控中心宣布完成诊断试剂的开发和测试;</div>
+				<div class="center">
+					<span>2020.1.10</span>
+				</div>
+				<div class="right">
+				</div>				
+			</div>
+			
+			<div class="box">
+				<div class="left"></div>
+				<div class="center">
+					<span>2020.1.11</span>
+				</div>
+				<div class="right">
+					国家疾控中心向武汉提供PCR检测试剂
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left" >
+					湖北省召开两会;<br/>武汉卫健委当日通报无新增确诊
+				</div>
+				<div class="center">
+					<span>2020.1.12</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.13</span>
+				</div>
+				<div class="right">
+					泰国新增1例确诊;<br/>
+					武汉卫健委当日通报室内无新增确诊;
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					卫健委专家徐建国对《科学》杂志表示763名密接者无一感染
+				</div>
+				<div class="center">
+					<span>2020.1.14</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.15</span>
+				</div>
+				<div class="right">
+					国家疾控中心启动一级应急响应;<br/>
+					武汉卫健委当日通报无新增确诊;<br/>
+				</div>
+			</div>
+						
+			<div class="box">
+				<div class="left" >
+					武汉卫健委当日通报无新增确诊/累积报告45例;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.16</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">					
+				</div>
+				<div class="center">
+					<span>2020.1.17</span>
+				</div>
+				<div class="right">
+					国家卫健委高级别专家组成员袁国勇书面报告;<br/>广东疾控中心警惕人传人和无症传染的风险;<br/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					湖北省两会闭幕;
+				</div>
+				<div class="center">
+					<span>2020.1.18</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.19</span>
+				</div>
+				<div class="right">
+					武汉市百步亭社区举办“万家宴”;<br/>
+					武汉卫健委通报17例新增确诊/累积报告198例;<br/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					钟南山接受白岩松采访,确定人传人;<br/>新冠肺炎纳入乙类传染病，采取甲类控制措施;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.20</span>
+				</div>
+				<div class="right">
+				</div>
+			</div>	
+								
+			<div class="box">
+				<div class="left"></div>
+				<div class="center">
+					<span>2020.1.21</span>
+				</div>
+				<div class="right">
+					累计确诊440例，死亡9例
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left" >
+					累计确诊571例，死亡17例;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.22</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.23</span>
+				</div>
+				<div class="right">
+					武汉“封城”/火神山医院开工;
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					累计确诊1287例，死亡41例
+				</div>
+				<div class="center">
+					<span>2020.1.24</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.25</span>
+				</div>
+				<div class="right">
+					累计确诊1975例;<br/>
+					死亡56例/雷神山医院开工;<br/>
+				</div>
+			</div>
+						
+			<div class="box">
+				<div class="left" >
+					累计确诊2744例，死亡80例;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.26</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">					
+				</div>
+				<div class="center">
+					<span>2020.1.27</span>
+				</div>
+				<div class="right">
+					累计确诊4515例，死亡106例;<br/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					累计确诊5974例，死亡132例,超过非典;
+				</div>
+				<div class="center">
+					<span>2020.1.28</span>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.29</span>
+				</div>
+				<div class="right">
+					累计确诊7711例，死亡170例;<br/>
+				</div>
+			</div>
+			
+			<div class="box">
+				<div class="left">
+					累计确诊9692例,死亡213例;<br/>
+				</div>
+				<div class="center">
+					<span>2020.1.30</span>
+				</div>
+				<div class="right">
+				</div>
+			</div>	
+			
+			<div class="box">
+				<div class="left">
+					
+				</div>
+				<div class="center">
+					<span>2020.1.31</span>
+				</div>
+				<div class="right">
+					累计确诊11821例，死亡259例;<br/>
+				</div>
+			</div>				
+								
+		</div>
+		
+		<div class="clear"></div>
+		
+		
+		
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业的苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责代码书写网页效果实现。</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+				
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+		
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#" target="_blank" title="">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+	</body>
+</html>

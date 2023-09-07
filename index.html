@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>COVID-19 疫情记忆官方网站-home</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<script src="js/jquery.min.js"></script>
+		<link href="css/button.css" rel="stylesheet" />
+		<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+		<style>
+			.gotop {
+				cursor: pointer;
+				position: fixed;
+				right: 25px;
+				bottom: 25px;
+				z-index: 99999;
+				display: block;
+				width: 50px;
+				height: 50px;
+				background: url(images/backtop.png) no-repeat 0 0;
+				opacity: 0.5;
+				filter: alpha(opacity=50);
+
+				/*动画效果*/
+				outline: none;
+				transition: all 0.30s ease-in-out;
+				-webkit-transition: all 0.30s ease-in-out;
+				-moz-transition: all 0.30s ease-in-out;
+				-o-transition: all 0.30s ease-in-out;
+				-ms-transition: all 0.30s ease-in-out;
+			}
+
+			.gotop:hover {
+				background: url(images/backtop.png) no-repeat 0 -52px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- 按钮-->
+		<div class="in_button">
+			<nav class="menu">
+				<input type="checkbox" class="menu-toggler" id="menu_toggler" checked>
+				<label for="menu_toggler"></label>
+				<ul>
+					<li class="menu-item">
+						<a href="#"><i class="fa fa-mail-reply-all" title="转发" aria-hidden="true"></i></a>
+					</li>
+					<li class="menu-item">
+						<a href="#"><i class="fa fa-bookmark" title="收藏" aria-hidden="true"></i></a>
+					</li>
+					<li class="menu-item">
+						<a href="personal information .html"><i class="fa fa-address-card" aria-hidden="true" title="个人中心"></i></a>
+					</li>
+					<li class="menu-item">
+						<a href="visualization.html"><i class="fa fa-signal" title="数据可视化" aria-hidden="true"></i></a>
+					</li>
+					<li class="menu-item">
+						<a href="#"><i class="fa fa-question-circle" title="求助" aria-hidden="true"></i></a>
+					</li>
+					<li class="menu-item">
+						<a href="#"><i class="fa fa-cog" title="其他设置" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- 按钮 -->
+
+		<div id="gotop"><a class="gotop"></a></div>
+		<script>
+			$("#gotop").hide();
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 100) {
+					$("#gotop").fadeIn()
+				} else {
+					$("#gotop").fadeOut()
+				}
+			});
+			$("#gotop").click(function() {
+				$('html,body').animate({
+					'scrollTop': 0
+				}, 500)
+			});
+		</script>
+
+
+		<!---顶图：logo+介绍--->
+		<div class=header>
+			<!---logoname--->
+			<div class="logoname">
+				<a href="index.html"><img src="images/logoname.png" < title="logoname" height=70px /></a>
+			</div>
+			<!---introduction--->
+			<div class='introduction'>
+				一个记录疫情相关信息的网站
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<!---nav--->
+		<div class="top-nav">
+			<ul>
+				<li class="active1"><a href="index.html">首页</a></li>
+				<li><a href="visualization.html">数据</a></li>
+				<li><a href="knowledge.html">知识</a></li>
+				<li><a href="news.html">新闻</a></li>
+				<li><a href="search.html">研究</a></li>
+				<li><a href="communication.html">交流</a></li>
+				<li><a href="celebrity.html">人物</a></li>
+				<div class="clear"> </div>
+			</ul>
+		</div>
+
+		<!---banner--->
+		<div id=banner class="image-slider">
+			<!-- <img src='images/index-banner.jpg' />
+			<img src='images/banner.png' /> -->
+		</div>
+		<div class="clear">
+
+			<!---visualization--->
+			<!-- <div class="title-v">
+			<h2 >-----可 视 化-----</h2>	
+		</div>
+		 -->
+
+			<div class="wrap1">
+				<div class="box">
+					<div class="left"></div>
+					<div class="center">
+						<span>2019.12.01</span>
+					</div>
+					<div class="right">
+						武汉首例新冠病例当日发病（无华南海鲜市场接触史）
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="left">
+						武汉卫健委通报中首例新冠病例当日发病
+					</div>
+					<div class="center">
+						<span>2019.12.08</span>
+					</div>
+					<div class="right">
+
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="left">
+
+					</div>
+					<div class="center">
+						<span>2019.12.12</span>
+					</div>
+					<div class="right">
+						确诊第一位病人
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="left">
+						稳健医疗取消在湖北召开高管年终会议
+					</div>
+					<div class="center">
+						<span>2019.12.20</span>
+					</div>
+					<div class="right">
+
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="left">
+
+					</div>
+					<div class="center">
+						<span>2019.12.26</span>
+					</div>
+					<div class="right">
+						武汉中西医结合医院向区疾控中心上报4例反常病例
+					</div>
+				</div>
+			</div>
+			<div class="service-grids-bottom animated wow slideInUp" data-wow-delay=".5s">
+				<a href="visualization.html">
+					<h2>点击查看更多</h2>
+				</a>
+			</div>
+		</div>
+		</div>
+		</div>
+
+		<!---knowledge zone--->
+		<div class="knowledge">
+			<h2>------防疫知识------</h2>
+			<div class="k-content">
+				<div class="k-content1">
+					<a href="know1.html">
+						<img src="images/index-know1.png" class="img-responsive" alt="">
+						<h4>疫情防护小知识：如何正确洗手？</h4>
+						<p>1.在流动水下淋湿双手；2.取适量洗手液（肥皂）均匀涂抹至整个手掌；3.认真搓双手至少15秒，具体操作如下：a.掌心相对，手指并拢，相互揉搓；b.手心对手背沿指缝揉搓，交换进行……
+						</p>
+					</a>
+				</div>
+				<div class="k-content2">
+					<a href="https://m.thepaper.cn/baijiahao_17578118">
+						<img src="images/index-know2.jpg" class="img-responsive" alt="">
+						<h4>去做核酸检测时，这些注意事项一定要知道！</h4>
+						<p>参加大规模核酸检测，需要注意什么？核酸检测前建议两小时内最好不吃东西，提前30分钟不喝水、不饮酒、不吃口香糖，避免采样过程中可能出现的呕吐、反胃等表现；戴好口罩，做好个人防护，保持社交距离……
+						</p>
+					</a>
+				</div>
+				<div class="k-content3">
+					<a href="https://new.qq.com/omn/20220414/20220414A0A64400.html">
+						<img src="images/index-know3.jpg" class="img-responsive" alt="">
+						<h4>【防疫知识】请收藏 疫情防控宣传小知识</h4>
+						<p>面对新型冠状病毒，我们不要恐慌，要做好自身防护，以下是一些关于新型冠状病毒的防范知识。个人防疫知识！1、勤洗手。使用肥皂或洗手液并用流动水洗手，用一次性纸巾或干净毛巾擦手。双手接触呼吸道分泌物后（如打喷嚏后）应立即洗手……
+						</p>
+					</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+		<!---news--->
+		<div class="news">
+			<h3>-----疫情新闻-----</h3>
+			<div class="n-content">
+				<div class="n1">
+					<div class="new-inner">
+						<h4><a href="news.html">疫情新闻</a></h4>
+						<p>了解更多疫情新闻</p>
+					</div>
+					<img src="images/in-news.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="n2">
+					<div class="new-inner">
+						<h4><a href="celebrity.html">人物故事</a></h4>
+						<p>了解更多人物事迹</p>
+					</div>
+					<img src="images/in-story.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="n3">
+					<div class="new-inner">
+						<h4><a href="search.html">学术研究</a></h4>
+						<p>了解更多疫情研究</p>
+					</div>
+					<img src="images/in-search.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<!---celebrity--->
+		<div class="celebrity">
+			<h3>-----抗疫人物-----</h3>
+			<div class="c-content">
+				<div class="c1">
+					<div class="c1-img">
+						<img src="images/c1-img.jpg" alt=" " />
+					</div>
+					<div class="c1-p">
+						<span>钟南山</span>
+						<p>钟南山（1936-） 江苏南京人，男，呼吸内科专家，中国科学院院士。中国抗击非典型肺炎、新冠肺炎疫情的领军人物。</p>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="c2">
+					<div class="c2-img">
+						<img src="images/c2-img.jpg" alt=" " />
+					</div>
+					<div class="c2-p">
+						<span>李兰娟</span>
+						<p>李兰娟（1947-）
+							浙江绍兴人，女，共产党员，感染病（传染病）学家，中国工程院院士。国家卫健委高级别专家组成员，国家健康科普专家库第一批成员，中国人工肝开拓者，国家传染病重点学科带头人。</p>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="c3">
+					<div class="c3-img">
+						<img src="images/c3-img.jpg" alt=" " />
+					</div>
+					<div class="c3-p">
+						<span>张定宇</span>
+						<p>张定宇（1963-） 湖北武汉人，男，中共党员，现任湖北省卫生健康委员会副主任、武汉金银潭医院院长，2020年被授予“人民英雄”国家荣誉称号。</p>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="c4">
+					<div class="c4-img">
+						<img src="images/c4-img.jpg" alt=" " />
+					</div>
+					<div class="c4-p">
+						<span>张文宏</span>
+						<p>张文宏(1969-) 浙江瑞安人 , 男,长期从事感染病与肝病专业的临床研究 [3] 。主任医师、博士生导师、复旦大学生物医学研究员。</p>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+
+		<div class="clear"> </div>
+
+		<!---communicating zone--->
+		<div class="com">
+			<div class="container">
+				<div class="com-top heading1">
+					<h3>-----交 流 区-----</h3>
+				</div>
+				<div class="com-bottom">
+					<div class="col-md-4 com-left animated wow fadeInRight" data-wow-duration="1000ms">
+						<div class="com-one">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+							<h4 class="">是昵昵呀-</h4>
+							<p>等疫情结束，我一定要吃烤肉吃小龙虾！！！</p>
+						</div>
+					</div>
+					<div class="col-md-4 com-left animated wow fadeInDown" data-wow-duration="1000ms">
+						<div class="com-one">
+							<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+							<h4>星星和你我成为了永恒</h4>
+							<p>三年前没有的毕业典礼 三年后的今天依然不会有了[失望] （三年前还没有疫情 毕业典礼当天下暴雨 学校又要求毕业生当天必须离校 …… ​ </p>
+						</div>
+					</div>
+					<div class="col-md-4 com-left animated wow fadeInRight" data-wow-duration="1000ms">
+						<div class="com-one">
+							<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+							<h4>爱吃布丁_的胖丁</h4>
+							<p>许愿疫情速速退散 ！</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<!--features-end-->
+
+
+
+		<!---webpage basic information--->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grid">
+					<h3>关于我们</h3>
+					<p>我们是中国传媒大学2020级数字媒体艺术双学位毕业设计制作小组，作品为“‘COVID-19疫情记忆’——一个疫情相关信息的记录网站”。组内成员为2019级传播学（媒体市场调查与分析方向）专业张驰驰、2019级数字媒体技术专业苟阑欣。我们共同完成内容资料搜集和网页架构设计工作。此外，苟阑欣负责网页界面设计；张驰驰负责书写代码实现网页效果。
+					</p>
+					<p>指导老师：王发花</p>
+					<a href="#">ReadMore</a>
+				</div>
+
+				<div class="footer-grid center-grid">
+					<h3>最新发布</h3>
+					<ul>
+						<li><a href="#">eiusmod tempor incididunt</a></li>
+						<li><a href="#">adipisicing elit, sed</a></li>
+						<li><a href="#">mod tempor incididunt ut</a></li>
+						<li><a href="#">dipisicing elit, sed do</a></li>
+						<li><a href="#">econsectetur adipisicing</a></li>
+					</ul>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="clear"> </div>
+
+		<!---license information--->
+		<div class="copy-right">
+			<p>Copyright &copy; 2022 CUC ZHANGCHICHI&GOULANXIN. All rights reserved.More Information <a href="#"
+					target="_blank" title="#">更多信息</a> -e-mail <a href="#" title="联系方式" target="_blank">联系我们</a></p>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		// var index=0;
+		$(".bottom li").click(function() {
+			// index=$(this).index();
+			$(this).addClass("active");
+			// .siblings().removeClass("active");
+			// $(".slide li").eq(index).fadeIn()
+			// console.log((index)
+		});
+	</script>
+
+</html>
