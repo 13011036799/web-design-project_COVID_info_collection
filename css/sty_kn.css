@@ -1,0 +1,576 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+	list-style-type:none;
+	}
+
+.clear{
+	clear:both;
+}
+
+.p a{
+	text-decoration: none;
+	list-style:none;
+}
+
+
+
+
+
+/* banner */
+
+.k-b-container{
+	height:510px;
+	margin-top:0px;
+	padding-top:65px;
+	position : relative;
+	background-color: rgba(56,137,201,0.2);
+}
+
+.box {
+    position              : relative;
+    width                 : 1200px;
+    height                : 450px;
+    /* box-shadow         : ; */
+    overflow           : hidden;
+    /* background-color   : #e056fd; */
+    z-index               : 0;
+    box-shadow            :
+        0 0 0 10px #fff,
+        5px 5px 0 10px rgba(0, 0, 0, 0.1);
+	padding:0 auto;
+	margin:0 auto;
+
+}
+
+.box::after {
+    position        : absolute;
+    content         : '';
+    width           : 100%;
+    height          : 1px;
+    background-color: rgba(255, 255, 255, .35);
+    bottom          : 25px;
+    z-index         : 80;
+}
+
+/* 元素box相同大小 */
+.box .item {
+    position: absolute;
+    width   : 1200px;
+    height  : 450px;
+    top     : 0;
+    left    : 0;
+}
+
+/* 让单选框离开显示区域 */
+input[type=radio] {
+    transform : translateY(-100px);
+    /* opacity: 0; */
+}
+
+label {
+    position              : absolute;
+    width                 : 20px;
+    height                : 20px;
+    background-color      : rgba(255, 255, 255, .35);
+    /* background-color   : #EC3E27; */
+    /* 鼠标 */
+    cursor                : pointer;
+    bottom                : 15px;
+    border-radius         : 50%;
+    left                  : calc((var(--i) - 1) * 108px + 350px);
+    z-index               : 90;
+    transition            : all 0.5s;
+}
+
+label:hover {
+    background-color: rgba(255, 255, 255, .6);
+}
+
+input[type=radio]:checked+label {
+    background-color: #fff;
+    box-shadow      : 0 0 0 6px rgba(255, 255, 255, .5);
+}
+
+.img {
+    position           : absolute;
+    width              : 1200px;
+    height             : 450px;
+    top                : 0;
+    left               : 0;
+    /* background-color: #F97F51; */
+    overflow: hidden;
+}
+
+.img img {
+    position  : absolute;
+    transform : translateX(1200px);
+    /* z-index在动画中变化挺特殊这里直接用0s */
+    transition: all .15s, z-index 0s;
+}
+
+input[type=radio]:checked~.img img {
+    transform: translateX(0px);
+    z-index  : 7;
+}
+
+.img .right {
+    position           : absolute;
+    width              : 270px;
+    height             : 450px;
+    /* background-color: #e056fd; */
+    z-index            : 8;
+    right              : 0;
+    background-image   : radial-gradient(rgba(255, 255, 255, 0.8), transparent);
+    background-size    : 1200px 1200px;
+    background-repeat  : no-repeat;
+    background-position: -300px -150px;
+    transform          : translateX(300px);
+    /* 这里时间比img要长一些 */
+    transition         : all 0.35s;
+    font-size: 40px;
+    color: #ffffff99;
+    text-align: center;
+    padding-top:100px;
+	
+}
+
+input[type=radio]:checked~.img .right {
+    transform   : translateX(0px);
+    /* z-index  : 777; */
+}
+
+.right a{
+	color:rgba(255, 255, 255, 1);
+	font-weight: bolder;
+	text-shadow: 2.5px 2.5px #323232 ;
+	line-height: 80px;
+	
+}
+
+.k-b-intro a{
+	color:rgba(255, 255, 255, 1);
+	font-weight: bolder;
+	text-shadow: 1.5px 1.5px #5b5b5b ;
+	opacity: 1;
+	font-size: 20px;
+	line-height:1px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hot zone */
+.hot-t{
+	margin-top:185px;
+	margin-bottom:50px;
+}
+
+.hot-t h1{
+	font-size: 30px;
+	font-family: "微软雅黑";
+	text-align: center;
+	color: rgba(56,137,201,0.8);
+	font-weight: bolder;
+	/* border-bottom: 1px solid #a6a6a6; */
+}
+/* hot knowledge */
+.hot-k{
+	width:20%;
+	height:400px;
+	background-color: rgba(56,137,201,0.3);
+	margin:40px 0 70px 115px;
+	padding:10px 15px;
+	border-radius: 8px;
+	float:left;
+}
+.title{
+	height:40px;
+	align-items: center;
+	border-bottom: 1px solid #ffffff;
+}
+
+.title h2{
+	font-size: 20px;
+	color: rgba(56,137,201,0.8);
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	padding:0 auto;
+	text-align: center;
+}
+
+.h-k-panel1{
+	height:50px;
+	margin-top:15px;
+	align-items: center;
+	background-color:rgba(255, 255, 255, 0.4);
+	border-radius: 15px;
+	padding: 3px 2px;
+}
+
+.h-k-panel1 span.t {
+	margin-left:2px;
+	margin-right:4px;
+	font-size: 18px;
+	font-weight: bolder;
+	font-family: "微软雅黑";
+	color: rgba(56,137,201,0.8);
+}
+
+.h-k-panel1 span.p {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: rgba(56,137,201,0.8);
+}
+
+.h-k-panel1 a {
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: rgba(56,137,201,0.8);
+}
+
+/* choice label */
+
+
+
+
+.add_back{
+	background-color: rgba(234, 245, 255, 0.8) ;
+	height:225px;
+	margin-top:80px;
+}
+/* search box */
+.search-box {
+	position: relative;
+	width:20%;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 1);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+	float:right;
+	margin:82px 0;
+	border:1px solid rgba(170, 170, 170, 1.0);
+}
+.search-btn {
+	color: #e84118;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(56,137,201,0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+	text-decoration: none;
+}
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0;
+}
+.search-box:hover > .search-txt {
+	width: 140px;
+	/* padding: 0 6px; */
+}
+.search-box:hover > .search-btn {
+	background: white;
+}
+
+
+
+
+/* classification_nav */
+:root {
+    --background-color: #2c3e50;
+    --border-color    : #7591AD;
+    --text-color      : #34495e;
+    --color1          : #EC3E27;
+    --color2          : #fd79a8;
+    --color3          : rgba(56,137,201,0.5);
+    --color4          : #00b894;
+    --color5          : #fdcb6e;
+    --color6          : #e056fd;
+    --color7          : #F97F51;
+    --color8          : #BDC581;
+}
+
+.container{
+	margin:50px 8%;
+	height:110px;
+	float:left;
+}
+
+.menu{
+	border-radius: 8px;
+}
+
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+    float   : left;
+    width   : auto;
+}
+
+.menu li a {
+    display: block;
+
+    background-color: var(--color3);
+    color           : #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size  : 20px;
+    font-weight: bold;
+	letter-spacing: 5px;
+
+    line-height: 60px;
+
+    min-width: 60px;
+
+    padding: 0 20px;
+
+    text-decoration: none;
+
+    transition: all .3s ease-in-out;
+    border-radius: 5px 5px ;
+}
+
+.menu li:hover a {
+    background-color: rgba(56,137,201,0.8);
+}
+
+/* 子菜单 */
+
+.sub {
+    position: absolute;
+
+    top : 60px;
+    left: 0;
+
+    width : 100%;
+    /* 控制高度变化 */
+    /* 解决子菜单占位的bug */
+    /* hover中增加height=auto */
+    height: 0;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    /* 临时显示出来 */
+    /* opacity: 1; */
+    opacity: 0;
+
+    /* 增加过渡时长 */
+    /* 不控制高度，因为高度没有实用具体的像素变化而是auto */
+    transition: all 0.5s;
+
+}
+
+/* 鼠标移入显示 */
+li:hover ul.sub {
+    opacity: 1;
+    height : auto;
+}
+
+.sub li {
+    float        : none;
+    /* 底部加边线 */
+    border-bottom: 1px solid rgba(56,137,201,1);
+}
+
+/* 最后一个元素取消边线 */
+.sub li:last-child {
+    border-bottom: none;
+}
+
+.sub a {
+    color           : #ffffff !important;
+    font-weight     : normal !important;
+    line-height     : 1.5 !important;
+    min-width       : auto !important;
+    padding         : 10px !important;
+    background-color: rgba(56,137,201,0.4) !important;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.sub li:hover a {
+    background-color: rgba(56,137,201,0.6) !important;
+}
+
+
+
+
+/* k-con */
+
+.k-con {
+	margin:0 0; 
+    padding: 50px auto;
+	height:1400px;
+	background-color: rgba(234, 245, 255, 0.8);
+}
+
+
+.k-content{
+	float: left;
+	position:absolute;
+	margin-top: 50px;
+	margin:50px 10%;
+	padding: 50px auto;
+}
+
+.k-content1{
+	float:left;
+	width: 40%;
+	margin-right:8%;
+	margin-left:2%;
+	margin-bottom:60px;
+	padding-right:50px;
+}
+
+.k-content2{
+	float:left;
+	width: 40%;
+
+	margin-left:1.6%;
+	margin-bottom:60px;
+}
+
+.k-content3{
+	float:left;
+	width: 40%;
+	margin-right:8%;
+	margin-left:2%;
+	margin-bottom:60px;
+	padding-right:50px;
+}
+
+.k-content4{
+	float:left;
+	width: 40%;
+/* 	margin-right:8%; */
+	margin-left:2%;
+	margin-bottom:60px;
+}
+
+.k-content5{
+	float:left;
+	width: 40%;
+	margin-right:8%;
+	margin-left:2%;
+	margin-bottom:60px;
+	padding-right:50px;
+}
+
+.k-content6{
+	float:left;
+	width: 40%;
+	/* margin-right:8%; */
+	margin-left:2%;
+	margin-bottom:60px;
+}
+
+.k-content h4 {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    text-decoration: none;
+    list-style:none;
+    font-weight: bolder;
+    color: #B2BDD4;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+.k-content p {
+    font-size: 12px;
+    line-height: 1.8em;
+	font-family: "微软雅黑";
+    color: #626262;
+	text-decoration: none;
+	list-style:none;
+}
+
+.k-content img {
+	width:100%;
+}
+
+.k-content a{
+	text-decoration: none;
+}
+
+
+/* know1 */
+
+.know1-page{
+	margin:100px 5% ;
+	background-color:rgba(234, 245, 255, 0.8) ;
+	border-radius: 40px;
+}
+
+.k-title1 {
+	padding:auto;
+	align-items: center;
+	text-align: center;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+
+.k-title1 h1{
+	font-size: 30px;
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	color: #000000;
+	padding-bottom:50px;
+}
+
+.k-title1 p{
+	font-size: 18px;
+	font-family: "微软雅黑";
+	color: #555555;
+	padding-bottom:30px;
+	border-bottom: 1px solid #a6a6a6;
+}
+
+.k-n-1{
+	padding:auto;
+	align-items: center;
+	text-align: center;
+}
+
+
+.k-n-1 span{
+	text-align: center;
+}
+
+.k-n-1 img{
+	width:60%;
+	padding-bottom:30px;
+}
